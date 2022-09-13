@@ -18,6 +18,9 @@
 # TODO: change to minigrid version
 #from TODO import __version__ as minigrid_version
 
+from importlib.machinery import SOURCE_SUFFIXES
+
+
 project = "MiniGrid"
 copyright = "2022"
 author = ""
@@ -39,6 +42,11 @@ extensions = [
     "sphinx.ext.githubpages",
     "myst_parser",
 ]
+
+source_suffix = {
+    '.rst': 'restructuredtext',
+    '.md': 'markdown',
+}
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ["_templates"]
