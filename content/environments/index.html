@@ -1,12 +1,12 @@
 <!doctype html>
-<html class="no-js" lang="en">
+<html class="no-js">
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
-    <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+    <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 <link rel="index" title="Index" href="../../genindex/" /><link rel="search" title="Search" href="../../search/" /><link rel="prev" title="Included Environments" href="../included_environments/" />
         <link rel="canonical" href="TODO/content/environments.html" />
 
-    <link rel="shortcut icon" href="../../_static/favicon.svg"/><meta name="generator" content="sphinx-5.1.1, furo 2022.06.21"/>
+    <link rel="shortcut icon" href="../../_static/favicon.svg"/><meta name="generator" content="sphinx-4.2.0, furo 2022.06.21"/>
         <title>Distributional shift environment - MiniGrid Documentation</title>
       <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/styles/furo.css?digest=40978830699223671f4072448e654b5958f38b89" />
@@ -213,7 +213,7 @@
         </div>
         <article role="main">
           <section id="distributional-shift-environment">
-<h1>Distributional shift environment<a class="headerlink" href="#distributional-shift-environment" title="Permalink to this heading">#</a></h1>
+<h1>Distributional shift environment<a class="headerlink" href="#distributional-shift-environment" title="Permalink to this headline">#</a></h1>
 <p>This environment is based on one of the DeepMind <a class="reference external" href="https://github.com/deepmind/ai-safety-gridworlds">AI safety gridworlds</a>.
 The agent starts in the top-left corner and must reach the goal which is in the top-right corner, but has to avoid stepping
 into lava on its way. The aim of this environment is to test an agent’s ability to generalize. There are two slightly
@@ -229,7 +229,7 @@ different variants of the environment, so that the agent can be trained on one v
 </ul>
 </section>
 <section id="lava-gap-environment">
-<h1>Lava gap environment<a class="headerlink" href="#lava-gap-environment" title="Permalink to this heading">#</a></h1>
+<h1>Lava gap environment<a class="headerlink" href="#lava-gap-environment" title="Permalink to this headline">#</a></h1>
 <p>The agent has to reach the green goal square at the opposite corner of the room,
 and must pass through a narrow gap in a vertical strip of deadly lava. Touching
 the lava terminate the episode with a zero reward. This environment is useful
@@ -245,7 +245,7 @@ for studying safety and safe exploration.</p>
 </p>
 </section>
 <section id="lava-crossing-environment">
-<h1>Lava crossing environment<a class="headerlink" href="#lava-crossing-environment" title="Permalink to this heading">#</a></h1>
+<h1>Lava crossing environment<a class="headerlink" href="#lava-crossing-environment" title="Permalink to this headline">#</a></h1>
 <p>The agent has to reach the green goal square on the other corner of the room
 while avoiding rivers of deadly lava which terminate the episode in failure.
 Each lava stream runs across the room either horizontally or vertically, and
@@ -267,7 +267,7 @@ safe exploration.</p>
 </ul>
 </section>
 <section id="simple-crossing-environment">
-<h1>Simple crossing environment<a class="headerlink" href="#simple-crossing-environment" title="Permalink to this heading">#</a></h1>
+<h1>Simple crossing environment<a class="headerlink" href="#simple-crossing-environment" title="Permalink to this headline">#</a></h1>
 <p>Similar to the <code class="docutils literal notranslate"><span class="pre">LavaCrossing</span></code> environment, the agent has to reach the green
 goal square on the other corner of the room, however lava is replaced by
 walls. This MDP is therefore much easier and maybe useful for quickly
@@ -286,7 +286,7 @@ testing your algorithms.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">MiniGrid-SimpleCrossingS11N5-v0</span></code></p></li>
 </ul>
 <section id="dynamic-obstacles-environment">
-<h2>Dynamic obstacles environment<a class="headerlink" href="#dynamic-obstacles-environment" title="Permalink to this heading">#</a></h2>
+<h2>Dynamic obstacles environment<a class="headerlink" href="#dynamic-obstacles-environment" title="Permalink to this headline">#</a></h2>
 <p>This environment is an empty room with moving obstacles.
 The goal of the agent is to reach the green goal square without colliding with any obstacle.
 A large penalty is subtracted if the agent collides with an obstacle and the episode finishes.
@@ -342,7 +342,6 @@ This environment is useful to test Dynamic Obstacle Avoidance for mobile robots 
 </div><script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
-    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../../_static/doctools.js"></script>
     <script src="../../_static/scripts/furo.js"></script>
     
