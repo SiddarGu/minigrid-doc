@@ -1,5 +1,5 @@
 sphinx
 myst-parser
-furo==2022.4.7
+furo==2022.6.21
 moviepy
 pygame
