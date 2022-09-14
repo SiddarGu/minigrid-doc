@@ -3,14 +3,17 @@ on:
   push:
     branches: [main]
 
+permissions:
+  contents: write
+
 jobs:
   docs:
     name: Generate Website
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-python@v2
+      - uses: actions/checkout@v3
+      - uses: actions/setup-python@v4
 
       - name: Install dependencies
         run: pip install -r requirements.txt && git clone https://github.com/Farama-Foundation/MiniGrid.git && pip install ./MiniGrid
@@ -28,7 +31,8 @@ jobs:
         run: rm -r ./build/.doctrees
 
       - name: Upload to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
+        uses: JamesIves/github-pages-deploy-action@v4
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./build
+          foler: _build
+          clean-exclude: | 
+            *.*.*/
