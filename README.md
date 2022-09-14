@@ -1,6 +1,7 @@
 # MiniGrid-docs
 
-This repo contains the [NEW website](TODO) for [MiniGrid](https://github.com/Farama-Foundation/MiniGrid). This site is currently in Beta and we are in the process of adding/editing information. 
+
+This repo contains the [NEW website]() for [MiniGrid](https://github.com/Farama-Foundation/MiniGrid). This site is currently in Beta and we are in the process of adding/editing information. 
 
 
 The documentation uses Sphinx. However, the documentation is written in regular md, NOT rst.

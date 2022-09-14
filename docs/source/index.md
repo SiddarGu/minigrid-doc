@@ -106,6 +106,6 @@ content/environments
 :caption: Development
 
 Github <https://github.com/Farama-Foundation/MiniGrid>
-Contribute to the Docs <TODO>
+Contribute to the Docs
 
 ```
