@@ -19,7 +19,7 @@ jobs:
         run: pip install -r requirements.txt && git clone https://github.com/Farama-Foundation/MiniGrid.git && pip install ./MiniGrid
 
       - name: Build
-        run: sphinx-build -b dirhtml -v docs _build
+        run: sphinx-build -b dirhtml -v docs/source build
 
       - name: Move 404
         run: mv ./build/404/index.html ./build/404.html
