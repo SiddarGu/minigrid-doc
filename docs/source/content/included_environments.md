@@ -22,9 +22,10 @@ The random variants of the environment have the agent starting at a random
 position for each episode, while the regular variants have the agent always
 starting in the corner opposite to the goal.
 
-<p align="center">
-    <img src="figures/empty-env.png" width=250 alt="Figure of the empty environment">
-</p>
+```{figure} ../_static/img/figures/empty-env.png
+   :alt: Figure of the empty environment
+   :width: 250
+```
 
 Registered configurations: 
 - `MiniGrid-Empty-5x5-v0`
@@ -41,9 +42,9 @@ in a maze composed of four rooms interconnected by 4 gaps in the walls. To
 obtain a reward, the agent must reach the green goal square. Both the agent
 and the goal square are randomly placed in any of the four rooms.
 
-<p align="center">
-    <img src="figures/four-rooms-env.png" width=380 alt="Figure of the four room environment">
-</p>
+```{figure} ../_static/img/figures/four-rooms-env.png
+   :alt: Figure of the four room environment
+```
 
 Registered configurations: 
 - `MiniGrid-FourRooms-v0`
@@ -55,9 +56,9 @@ a goal and then get to the green goal square. This environment is difficult,
 because of the sparse reward, to solve using classical RL algorithms. It is
 useful to experiment with curiosity or curriculum learning.
 
-<p align="center">
-    <img src="figures/door-key-env.png" alt="Figure of the door key environment">
-</p>
+```{figure} ../_static/img/figures/door-key-env.png
+   :alt: Figure of the door key environment
+```
 
 Registered configurations: 
 - `MiniGrid-DoorKey-5x5-v0`
@@ -73,9 +74,9 @@ square the agent must get to. This environment is extremely difficult to
 solve using RL alone. However, by gradually increasing the number of
 rooms and building a curriculum, the environment can be solved.
 
-<p align="center">
-    <img src="figures/multi-room.gif" width=416 height=424 alt="Figure of the Multi-room environment">
-</p>
+```{figure} ../_static/img/figures/multi-room.gif
+   :alt: Figure of the Multi-room environment
+```
 
 Registered configurations:
 - `MiniGrid-MultiRoom-N2-S4-v0` (two small rooms)
@@ -89,9 +90,10 @@ agent receives a textual string as part of its observation telling it
 which object to pick up. Picking up the wrong object terminates the
 episode with zero reward.
 
-<p align="center">
-    <img src="figures/fetch-env.png" width=450 alt="Figure of the fetch environment">
-</p>
+```{figure} ../_static/img/figures/fetch-env.png
+   :alt: Figure of the fetch environment
+   :width: 450
+```
 
 Registered configurations:
 - `MiniGrid-Fetch-5x5-N2-v0`
@@ -105,9 +107,10 @@ receives a textual (mission) string as input, telling it which door to go to,
 (eg: "go to the red door"). It receives a positive reward for performing the
 `done` action next to the correct door, as indicated in the mission string.
 
-<p align="center">
-    <img src="figures/gotodoor-6x6.png" width=400 alt="Figure of the go-to-door environment">
-</p>
+```{figure} ../_static/img/figures/gotodoor-6x6.png
+   :alt: Figure of the go-to-door environment
+   :width: 400
+```
 
 Registered configurations:
 - `MiniGrid-GoToDoor-5x5-v0`
@@ -172,14 +175,30 @@ hidden in another room, and the agent has to explore the environment to find
 it. The mission string does not give the agent any clues as to where the
 key is placed. This environment can be solved without relying on language.
 
-<p align="center">
-    <img src="figures/KeyCorridorS3R1.png" width=250 alt="Figure of the Key Corridor for config S3R1">
-    <img src="figures/KeyCorridorS3R2.png" width=250 alt="Figure of the Key Corridor for config S3R2">
-    <img src="figures/KeyCorridorS3R3.png" width=250 alt="Figure of the Key Corridor for config S3R3">
-    <img src="figures/KeyCorridorS4R3.png" width=250 alt="Figure of the Key Corridor for config S4R3">
-    <img src="figures/KeyCorridorS5R3.png" width=250 alt="Figure of the Key Corridor for config S5R3">
-    <img src="figures/KeyCorridorS6R3.png" width=250 alt="Figure of the Key Corridor for config S6R3">
-</p>
+```{figure} ../_static/img/figures/KeyCorridorS3R1.png
+   :alt: Figure of the Key Corridor for config S3R1
+   :width: 250
+```
+```{figure} ../_static/img/figures/KeyCorridorS3R2.png
+   :alt: Figure of the Key Corridor for config S3R2
+   :width: 250
+```
+```{figure} ../_static/img/figures/KeyCorridorS3R3.png
+   :alt: Figure of the Key Corridor for config S3R3
+   :width: 250
+```
+```{figure} ../_static/img/figures/KeyCorridorS4R3.png
+   :alt: Figure of the Key Corridor for config S4R3
+   :width: 250
+```
+```{figure} ../_static/img/figures/KeyCorridorS5R3.png
+   :alt: Figure of the Key Corridor for config S5R3
+   :width: 250
+```
+```{figure} ../_static/img/figures/KeyCorridorS6R3.png
+   :alt: Figure of the Key Corridor for config S6R3
+   :width: 250
+```
 
 Registered configurations:
 - `MiniGrid-KeyCorridorS3R1-v0`
@@ -194,9 +213,10 @@ Registered configurations:
 The agent has to open a locked door. This environment can be solved without
 relying on language.
 
-<p align="center">
-    <img src="figures/Unlock.png" width=200 alt="Figure of the unlock environment">
-</p>
+```{figure} ../_static/img/figures/Unlock.png
+   :alt: Figure of the unlock environment
+   :width: 200
+```
 
 Registered configurations:
 - `MiniGrid-Unlock-v0`
@@ -206,10 +226,10 @@ Registered configurations:
 The agent has to pick up a box which is placed in another room, behind a
 locked door. This environment can be solved without relying on language.
 
-<p align="center">
-    <img src="figures/UnlockPickup.png" width=250 alt="Figure of the unlock pickup environment">
-</p>
-
+```{figure} ../_static/img/figures/UnlockPickup.png
+   :alt: Figure of the unlock pickup environment
+   :width: 250
+```
 Registered configurations:
 - `MiniGrid-UnlockPickup-v0`
 
@@ -221,9 +241,10 @@ before it can unlock the door. Hence, the agent has to learn to move the ball,
 pick up the key, open the door and pick up the object in the other room.
 This environment can be solved without relying on language.
 
-<p align="center">
-    <img src="figures/BlockedUnlockPickup.png" width=250 alt="Figure of the blocked-unlock-pickup environment">
-</p>
+```{figure} ../_static/img/figures/BlockedUnlockPickup.png
+   :alt: Figure of the blocked-unlock-pickup environment
+   :width: 250
+```
 
 Registered configurations:
 - `MiniGrid-BlockedUnlockPickup-v0`
@@ -234,17 +255,33 @@ The agent has to pick up a box which is placed in a corner of a 3x3 maze.
 The doors are locked, the keys are hidden in boxes and doors are obstructed
 by balls. This environment can be solved without relying on language.
 
-<p align="center">
-  <img src="figures/ObstructedMaze-1Dl.png" width="250">
-  <img src="figures/ObstructedMaze-1Dlh.png" width="250">
-  <img src="figures/ObstructedMaze-1Dlhb.png" width="250">
-  <img src="figures/ObstructedMaze-2Dl.png" width="100">
-  <img src="figures/ObstructedMaze-2Dlh.png" width="100">
-  <img src="figures/ObstructedMaze-2Dlhb.png" width="100">
-  <img src="figures/ObstructedMaze-1Q.png" width="250">
-  <img src="figures/ObstructedMaze-2Q.png" width="250">
-  <img src="figures/ObstructedMaze-4Q.png" width="250">
-</p>
+```{figure} ../_static/img/figures/ObstructedMaze-1Dl.png
+   :width: 250
+```
+```{figure} ../_static/img/figures/ObstructedMaze-1Dlh.png
+   :width: 250
+```
+```{figure} ../_static/img/figures/ObstructedMaze-1Dlhb.png
+   :width: 250
+```
+```{figure} ../_static/img/figures/ObstructedMaze-2Dl.png
+   :width: 100
+```
+```{figure} ../_static/img/figures/ObstructedMaze-2Dlh.png
+   :width: 100
+```
+```{figure} ../_static/img/figures/ObstructedMaze-2Dlhb.png
+   :width: 100
+```
+```{figure} ../_static/img/figures/ObstructedMaze-1Q.png
+   :width: 250
+```
+```{figure} ../_static/img/figures/ObstructedMaze-2Q.png
+   :width: 250
+```
+```{figure} ../_static/img/figures/ObstructedMaze-4Q.png
+   :width: 250
+```
 
 Registered configurations:
 - `MiniGrid-ObstructedMaze-1Dl-v0`

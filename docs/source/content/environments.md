@@ -11,10 +11,16 @@ The agent starts in the top-left corner and must reach the goal which is in the 
 into lava on its way. The aim of this environment is to test an agent's ability to generalize. There are two slightly
 different variants of the environment, so that the agent can be trained on one variant and tested on the other.
 
-<p align="center">
-  <img src="figures/DistShift1.png" width=200 alt="Figure of the DistShift1 environment">
-  <img src="figures/DistShift2.png" width=200 alt="Figure of the DistShift2 environment">
-</p>
+
+```{figure} ../_static/img/figures/DistShift1.png
+   :alt: Figure of the DistShift1 environment
+   :width: 200
+```
+
+```{figure} ../_static/img/figures/DistShift2.png
+   :alt: Figure of the DistShift2 environment
+   :width: 200
+```
 
 Registered configurations:
 - `MiniGrid-DistShift1-v0`
@@ -32,9 +38,11 @@ Registered configurations:
 - `MiniGrid-LavaGapS6-v0`
 - `MiniGrid-LavaGapS7-v0`
 
-<p align="center">
-  <img src="figures/LavaGapS6.png" width=200 alt="Figure of the LavaGap environment">
-</p>
+
+```{figure} ../_static/img/figures/LavaGapS6.png
+   :alt: Figure of the LavaGap environment
+   :width: 200
+```
 
 # Lava crossing environment
 
@@ -45,12 +53,22 @@ has a single crossing point which can be safely used;  Luckily, a path to the
 goal is guaranteed to exist. This environment is useful for studying safety and
 safe exploration.
 
-<p align="center">
-  <img src="figures/LavaCrossingS9N1.png" width=200 alt="Figure of the LavaCrossingS9N1 environment">
-  <img src="figures/LavaCrossingS9N2.png" width=200 alt="Figure of the LavaCrossingS9N2 environment">
-  <img src="figures/LavaCrossingS9N3.png" width=200 alt="Figure of the LavaCrossingS9N3 environment">
-  <img src="figures/LavaCrossingS11N5.png" width=250 alt="Figure of the LavaCrossingS11N5 environment">
-</p>
+```{figure} ../_static/img/figures/LavaCrossingS9N1.png
+   :alt: Figure of the LavaCrossingS9N1 environment
+   :width: 200
+```
+```{figure} ../_static/img/figures/LavaCrossingS9N2.png
+   :alt: Figure of the LavaCrossingS9N2 environment
+   :width: 200
+```
+```{figure} ../_static/img/figures/LavaCrossingS9N3.png
+   :alt: Figure of the LavaCrossingS9N3 environment
+   :width: 200
+```
+```{figure} ../_static/img/figures/LavaCrossingS11N5.png
+   :alt: Figure of the LavaCrossingS11N5 environment
+   :width: 250
+```
 
 Registered configurations:
 - `MiniGrid-LavaCrossingS9N1-v0`
@@ -65,12 +83,22 @@ goal square on the other corner of the room, however lava is replaced by
 walls. This MDP is therefore much easier and maybe useful for quickly
 testing your algorithms.
 
-<p align="center">
-  <img src="figures/SimpleCrossingS9N1.png" width=200 alt="Figure of the SimpleCrossingS9N1 environment">
-  <img src="figures/SimpleCrossingS9N2.png" width=200 alt="Figure of the SimpleCrossingS9N2 environment">
-  <img src="figures/SimpleCrossingS9N3.png" width=200 alt="Figure of the SimpleCrossingS9N3 environment">
-  <img src="figures/SimpleCrossingS11N5.png" width=250 alt="Figure of the SimpleCrossingS11N5 environment">
-</p>
+```{figure} ../_static/img/figures/SimpleCrossingS9N1.png
+   :alt: Figure of the SimpleCrossingS9N1 environment
+   :width: 200
+```
+```{figure} ../_static/img/figures/SimpleCrossingS9N2.png
+   :alt: Figure of the SimpleCrossingS9N2 environment
+   :width: 200
+```
+```{figure} ../_static/img/figures/SimpleCrossingS9N3.png
+   :alt: Figure of the SimpleCrossingS9N3 environment
+   :width: 200
+```
+```{figure} ../_static/img/figures/SimpleCrossingS11N5.png
+   :alt: Figure of the SimpleCrossingS11N5 environment
+   :width: 250
+```
 
 Registered configurations:
 - `MiniGrid-SimpleCrossingS9N1-v0`
@@ -85,9 +113,9 @@ The goal of the agent is to reach the green goal square without colliding with a
 A large penalty is subtracted if the agent collides with an obstacle and the episode finishes. 
 This environment is useful to test Dynamic Obstacle Avoidance for mobile robots with Reinforcement Learning in Partial Observability.
 
-<p align="center">
-    <img src="figures/dynamic_obstacles.gif" alt="GIF of the Dynamic Obstacles environment">
-</p>
+```{figure} ../_static/img/figures/dynamic_obstacles.gif
+   :alt: GIF of the Dynamic Obstacles environment
+```
 
 Registered configurations:
 - `MiniGrid-Dynamic-Obstacles-5x5-v0`
