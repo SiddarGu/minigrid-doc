@@ -228,9 +228,9 @@ and with large rooms to experiment with sparse rewards and exploration.
 The random variants of the environment have the agent starting at a random
 position for each episode, while the regular variants have the agent always
 starting in the corner opposite to the goal.</p>
-<p align="center">
-    <img src="figures/empty-env.png" width=250 alt="Figure of the empty environment">
-</p>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../../_images/empty-env.png"><img alt="Figure of the empty environment" src="../../_images/empty-env.png" style="width: 250px;" /></a>
+</figure>
 <p>Registered configurations:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">MiniGrid-Empty-5x5-v0</span></code></p></li>
@@ -247,9 +247,9 @@ starting in the corner opposite to the goal.</p>
 in a maze composed of four rooms interconnected by 4 gaps in the walls. To
 obtain a reward, the agent must reach the green goal square. Both the agent
 and the goal square are randomly placed in any of the four rooms.</p>
-<p align="center">
-    <img src="figures/four-rooms-env.png" width=380 alt="Figure of the four room environment">
-</p>
+<figure class="align-default">
+<img alt="Figure of the four room environment" src="../../_images/four-rooms-env.png" />
+</figure>
 <p>Registered configurations:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">MiniGrid-FourRooms-v0</span></code></p></li>
@@ -261,9 +261,9 @@ and the goal square are randomly placed in any of the four rooms.</p>
 a goal and then get to the green goal square. This environment is difficult,
 because of the sparse reward, to solve using classical RL algorithms. It is
 useful to experiment with curiosity or curriculum learning.</p>
-<p align="center">
-    <img src="figures/door-key-env.png" alt="Figure of the door key environment">
-</p>
+<figure class="align-default">
+<img alt="Figure of the door key environment" src="../../_images/door-key-env.png" />
+</figure>
 <p>Registered configurations:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">MiniGrid-DoorKey-5x5-v0</span></code></p></li>
@@ -279,9 +279,9 @@ opened in order to get to the next room. The final room has the green goal
 square the agent must get to. This environment is extremely difficult to
 solve using RL alone. However, by gradually increasing the number of
 rooms and building a curriculum, the environment can be solved.</p>
-<p align="center">
-    <img src="figures/multi-room.gif" width=416 height=424 alt="Figure of the Multi-room environment">
-</p>
+<figure class="align-default">
+<img alt="Figure of the Multi-room environment" src="../../_images/multi-room.gif" />
+</figure>
 <p>Registered configurations:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">MiniGrid-MultiRoom-N2-S4-v0</span></code> (two small rooms)</p></li>
@@ -295,9 +295,9 @@ rooms and building a curriculum, the environment can be solved.</p>
 agent receives a textual string as part of its observation telling it
 which object to pick up. Picking up the wrong object terminates the
 episode with zero reward.</p>
-<p align="center">
-    <img src="figures/fetch-env.png" width=450 alt="Figure of the fetch environment">
-</p>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../../_images/fetch-env.png"><img alt="Figure of the fetch environment" src="../../_images/fetch-env.png" style="width: 450px;" /></a>
+</figure>
 <p>Registered configurations:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">MiniGrid-Fetch-5x5-N2-v0</span></code></p></li>
@@ -311,9 +311,9 @@ episode with zero reward.</p>
 receives a textual (mission) string as input, telling it which door to go to,
 (eg: “go to the red door”). It receives a positive reward for performing the
 <code class="docutils literal notranslate"><span class="pre">done</span></code> action next to the correct door, as indicated in the mission string.</p>
-<p align="center">
-    <img src="figures/gotodoor-6x6.png" width=400 alt="Figure of the go-to-door environment">
-</p>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../../_images/gotodoor-6x6.png"><img alt="Figure of the go-to-door environment" src="../../_images/gotodoor-6x6.png" style="width: 400px;" /></a>
+</figure>
 <p>Registered configurations:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">MiniGrid-GoToDoor-5x5-v0</span></code></p></li>
@@ -382,14 +382,24 @@ The agent has to pick up an object which is behind a locked door. The key is
 hidden in another room, and the agent has to explore the environment to find
 it. The mission string does not give the agent any clues as to where the
 key is placed. This environment can be solved without relying on language.</p>
-<p align="center">
-    <img src="figures/KeyCorridorS3R1.png" width=250 alt="Figure of the Key Corridor for config S3R1">
-    <img src="figures/KeyCorridorS3R2.png" width=250 alt="Figure of the Key Corridor for config S3R2">
-    <img src="figures/KeyCorridorS3R3.png" width=250 alt="Figure of the Key Corridor for config S3R3">
-    <img src="figures/KeyCorridorS4R3.png" width=250 alt="Figure of the Key Corridor for config S4R3">
-    <img src="figures/KeyCorridorS5R3.png" width=250 alt="Figure of the Key Corridor for config S5R3">
-    <img src="figures/KeyCorridorS6R3.png" width=250 alt="Figure of the Key Corridor for config S6R3">
-</p>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../../_images/KeyCorridorS3R1.png"><img alt="Figure of the Key Corridor for config S3R1" src="../../_images/KeyCorridorS3R1.png" style="width: 250px;" /></a>
+</figure>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../../_images/KeyCorridorS3R2.png"><img alt="Figure of the Key Corridor for config S3R2" src="../../_images/KeyCorridorS3R2.png" style="width: 250px;" /></a>
+</figure>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../../_images/KeyCorridorS3R3.png"><img alt="Figure of the Key Corridor for config S3R3" src="../../_images/KeyCorridorS3R3.png" style="width: 250px;" /></a>
+</figure>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../../_images/KeyCorridorS4R3.png"><img alt="Figure of the Key Corridor for config S4R3" src="../../_images/KeyCorridorS4R3.png" style="width: 250px;" /></a>
+</figure>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../../_images/KeyCorridorS5R3.png"><img alt="Figure of the Key Corridor for config S5R3" src="../../_images/KeyCorridorS5R3.png" style="width: 250px;" /></a>
+</figure>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../../_images/KeyCorridorS6R3.png"><img alt="Figure of the Key Corridor for config S6R3" src="../../_images/KeyCorridorS6R3.png" style="width: 250px;" /></a>
+</figure>
 <p>Registered configurations:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">MiniGrid-KeyCorridorS3R1-v0</span></code></p></li>
@@ -404,9 +414,9 @@ key is placed. This environment can be solved without relying on language.</p>
 <h2>Unlock environment<a class="headerlink" href="#unlock-environment" title="Permalink to this headline">#</a></h2>
 <p>The agent has to open a locked door. This environment can be solved without
 relying on language.</p>
-<p align="center">
-    <img src="figures/Unlock.png" width=200 alt="Figure of the unlock environment">
-</p>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../../_images/Unlock.png"><img alt="Figure of the unlock environment" src="../../_images/Unlock.png" style="width: 200px;" /></a>
+</figure>
 <p>Registered configurations:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">MiniGrid-Unlock-v0</span></code></p></li>
@@ -416,9 +426,9 @@ relying on language.</p>
 <h2>Unlock pickup environment<a class="headerlink" href="#unlock-pickup-environment" title="Permalink to this headline">#</a></h2>
 <p>The agent has to pick up a box which is placed in another room, behind a
 locked door. This environment can be solved without relying on language.</p>
-<p align="center">
-    <img src="figures/UnlockPickup.png" width=250 alt="Figure of the unlock pickup environment">
-</p>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../../_images/UnlockPickup.png"><img alt="Figure of the unlock pickup environment" src="../../_images/UnlockPickup.png" style="width: 250px;" /></a>
+</figure>
 <p>Registered configurations:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">MiniGrid-UnlockPickup-v0</span></code></p></li>
@@ -431,9 +441,9 @@ locked door. The door is also blocked by a ball which the agent has to move
 before it can unlock the door. Hence, the agent has to learn to move the ball,
 pick up the key, open the door and pick up the object in the other room.
 This environment can be solved without relying on language.</p>
-<p align="center">
-    <img src="figures/BlockedUnlockPickup.png" width=250 alt="Figure of the blocked-unlock-pickup environment">
-</p>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../../_images/BlockedUnlockPickup.png"><img alt="Figure of the blocked-unlock-pickup environment" src="../../_images/BlockedUnlockPickup.png" style="width: 250px;" /></a>
+</figure>
 <p>Registered configurations:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">MiniGrid-BlockedUnlockPickup-v0</span></code></p></li>
@@ -444,17 +454,33 @@ This environment can be solved without relying on language.</p>
 <p>The agent has to pick up a box which is placed in a corner of a 3x3 maze.
 The doors are locked, the keys are hidden in boxes and doors are obstructed
 by balls. This environment can be solved without relying on language.</p>
-<p align="center">
-  <img src="figures/ObstructedMaze-1Dl.png" width="250">
-  <img src="figures/ObstructedMaze-1Dlh.png" width="250">
-  <img src="figures/ObstructedMaze-1Dlhb.png" width="250">
-  <img src="figures/ObstructedMaze-2Dl.png" width="100">
-  <img src="figures/ObstructedMaze-2Dlh.png" width="100">
-  <img src="figures/ObstructedMaze-2Dlhb.png" width="100">
-  <img src="figures/ObstructedMaze-1Q.png" width="250">
-  <img src="figures/ObstructedMaze-2Q.png" width="250">
-  <img src="figures/ObstructedMaze-4Q.png" width="250">
-</p>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../../_images/ObstructedMaze-1Dl.png"><img alt="../../_images/ObstructedMaze-1Dl.png" src="../../_images/ObstructedMaze-1Dl.png" style="width: 250px;" /></a>
+</figure>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../../_images/ObstructedMaze-1Dlh.png"><img alt="../../_images/ObstructedMaze-1Dlh.png" src="../../_images/ObstructedMaze-1Dlh.png" style="width: 250px;" /></a>
+</figure>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../../_images/ObstructedMaze-1Dlhb.png"><img alt="../../_images/ObstructedMaze-1Dlhb.png" src="../../_images/ObstructedMaze-1Dlhb.png" style="width: 250px;" /></a>
+</figure>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../../_images/ObstructedMaze-2Dl.png"><img alt="../../_images/ObstructedMaze-2Dl.png" src="../../_images/ObstructedMaze-2Dl.png" style="width: 100px;" /></a>
+</figure>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../../_images/ObstructedMaze-2Dlh.png"><img alt="../../_images/ObstructedMaze-2Dlh.png" src="../../_images/ObstructedMaze-2Dlh.png" style="width: 100px;" /></a>
+</figure>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../../_images/ObstructedMaze-2Dlhb.png"><img alt="../../_images/ObstructedMaze-2Dlhb.png" src="../../_images/ObstructedMaze-2Dlhb.png" style="width: 100px;" /></a>
+</figure>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../../_images/ObstructedMaze-1Q.png"><img alt="../../_images/ObstructedMaze-1Q.png" src="../../_images/ObstructedMaze-1Q.png" style="width: 250px;" /></a>
+</figure>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../../_images/ObstructedMaze-2Q.png"><img alt="../../_images/ObstructedMaze-2Q.png" src="../../_images/ObstructedMaze-2Q.png" style="width: 250px;" /></a>
+</figure>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../../_images/ObstructedMaze-4Q.png"><img alt="../../_images/ObstructedMaze-4Q.png" src="../../_images/ObstructedMaze-4Q.png" style="width: 250px;" /></a>
+</figure>
 <p>Registered configurations:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">MiniGrid-ObstructedMaze-1Dl-v0</span></code></p></li>
