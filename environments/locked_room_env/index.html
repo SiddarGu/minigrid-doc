@@ -3,11 +3,11 @@
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
     <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-<link rel="index" title="Index" href="../../genindex/" /><link rel="search" title="Search" href="../../search/" /><link rel="next" title="Wrappers" href="../../api/wrappers/" /><link rel="prev" title="Basic Usage" href="../basic_usage/" />
-        <link rel="canonical" href="TODO/content/reinforcement_learning.html" />
+<link rel="index" title="Index" href="../../genindex/" /><link rel="search" title="Search" href="../../search/" /><link rel="next" title="Key corridor" href="../key_corridor_env/" /><link rel="prev" title="Memory" href="../memory_env/" />
+        <link rel="canonical" href="TODO/environments/locked_room_env.html" />
 
     <link rel="shortcut icon" href="../../_static/favicon.svg"/><meta name="generator" content="sphinx-4.2.0, furo 2022.06.21"/>
-        <title>Reinforcement Learning - MiniGrid Documentation</title>
+        <title>Locked room - MiniGrid Documentation</title>
       <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/styles/furo.css?digest=40978830699223671f4072448e654b5958f38b89" />
     <link rel="stylesheet" type="text/css" href="../../_static/styles/furo-extensions.css?digest=30d1aed668e5c3a91c3e3bf6a60b675221979f0e" />
@@ -161,24 +161,44 @@
 </form>
 <div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
   <p class="caption" role="heading"><span class="caption-text">Introduction</span></p>
-<ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="../installation/">Installation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../basic_usage/">Basic Usage</a></li>
-<li class="toctree-l1 current current-page"><a class="current reference internal" href="#">Reinforcement Learning</a></li>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../content/installation/">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../content/basic_usage_and_rl/">Basic Usage and Reinforcement Learning</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../api/wrappers/">Wrappers</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../design/">Design</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../content/pubs/">List of publications</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Environments</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../included_environments/">Included Environments</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../environments/">Distributional shift environment</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../environments/#lava-gap-environment">Lava gap environment</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../environments/#lava-crossing-environment">Lava crossing environment</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../environments/#simple-crossing-environment">Simple crossing environment</a></li>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../design/">General Structure</a></li>
+<li class="toctree-l1 current has-children"><a class="reference internal" href="../">Included environments</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../empty_env/">Empty</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../four_rooms_env/">Four rooms</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../door_key_env/">Door &amp; key</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../multiroom_env/">Multi-room</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../fetch_env/">Fetch</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../go_to_door_env/">Go-to-door</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../put_near_env/">Put-near</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../red_and_blue_doors_env/">Red and blue doors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../memory_env/">Memory</a></li>
+<li class="toctree-l2 current current-page"><a class="current reference internal" href="#">Locked room</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../key_corridor_env/">Key corridor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../unlock_env/">Unlock</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../unlock_pickup_env/">Unlock pickup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../blocked_unlock_pickup_env/">Blocked unlock pickup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../obstructed_maze_env/">Obstructed maze</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../distributional_shift_env/">Distributional shift</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../lava_gap_env/">Lava gap</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../lava_crossing_env/">Lava crossing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../simple_crossing_env/">Simple crossing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../dynamic_obstacles_env/">Dynamic obstacles</a></li>
+</ul>
+</li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Development</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference external" href="https://github.com/Farama-Foundation/MiniGrid">Github</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://farama.org/donations">Donate</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../404/">Contribute to the Docs</a></li>
 </ul>
 
 </div>
@@ -212,15 +232,17 @@
           </label>
         </div>
         <article role="main">
-          <section id="reinforcement-learning">
-<h1>Reinforcement Learning<a class="headerlink" href="#reinforcement-learning" title="Permalink to this headline">#</a></h1>
-<p>If you want to train an agent with reinforcement learning, I recommend using the code found in the <a class="reference external" href="https://github.com/lcswillems/torch-rl">torch-rl</a> repository.
-This code has been tested and is known to work with this environment. The default hyper-parameters are also known to converge.</p>
-<p>A sample training command is:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="n">torch</span><span class="o">-</span><span class="n">rl</span>
-<span class="n">python3</span> <span class="o">-</span><span class="n">m</span> <span class="n">scripts</span><span class="o">.</span><span class="n">train</span> <span class="o">--</span><span class="n">env</span> <span class="n">MiniGrid</span><span class="o">-</span><span class="n">Empty</span><span class="o">-</span><span class="mi">8</span><span class="n">x8</span><span class="o">-</span><span class="n">v0</span> <span class="o">--</span><span class="n">algo</span> <span class="n">ppo</span>
-</pre></div>
-</div>
+          <section id="locked-room">
+<h1>Locked room<a class="headerlink" href="#locked-room" title="Permalink to this headline">#</a></h1>
+<p>The environment has six rooms, one of which is locked. The agent receives
+a textual mission string as input, telling it which room to go to in order
+to get the key that opens the locked room. It then has to go into the locked
+room in order to reach the final goal. This environment is extremely difficult
+to solve with vanilla reinforcement learning alone.</p>
+<p>Registered configurations:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">MiniGrid-LockedRoom-v0</span></code></p></li>
+</ul>
 </section>
 
         </article>
@@ -228,16 +250,26 @@ This code has been tested and is known to work with this environment. The defaul
       <footer>
         
         <div class="related-pages">
-          <a class="next-page" href="../../api/wrappers/">
+          <a class="next-page" href="../key_corridor_env/">
               <div class="page-info">
                 <div class="context">
                   <span>Next</span>
                 </div>
-                <div class="title">Wrappers</div>
+                <div class="title">Key corridor</div>
               </div>
               <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
             </a>
-          
+          <a class="prev-page" href="../memory_env/">
+              <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
+              <div class="page-info">
+                <div class="context">
+                  <span>Previous</span>
+                </div>
+                
+                <div class="title">Memory</div>
+                
+              </div>
+            </a>
         </div>
         <div class="bottom-of-page">
           <div class="left-details">

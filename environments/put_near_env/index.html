@@ -3,11 +3,11 @@
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
     <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-<link rel="index" title="Index" href="../../genindex/" /><link rel="search" title="Search" href="../../search/" /><link rel="next" title="List of publications" href="../../content/pubs/" /><link rel="prev" title="Basic Usage and Reinforcement Learning" href="../../content/basic_usage_and_rl/" />
-        <link rel="canonical" href="TODO/api/wrappers.html" />
+<link rel="index" title="Index" href="../../genindex/" /><link rel="search" title="Search" href="../../search/" /><link rel="next" title="Red and blue doors" href="../red_and_blue_doors_env/" /><link rel="prev" title="Go-to-door" href="../go_to_door_env/" />
+        <link rel="canonical" href="TODO/environments/put_near_env.html" />
 
     <link rel="shortcut icon" href="../../_static/favicon.svg"/><meta name="generator" content="sphinx-4.2.0, furo 2022.06.21"/>
-        <title>Wrappers - MiniGrid Documentation</title>
+        <title>Put-near - MiniGrid Documentation</title>
       <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/styles/furo.css?digest=40978830699223671f4072448e654b5958f38b89" />
     <link rel="stylesheet" type="text/css" href="../../_static/styles/furo-extensions.css?digest=30d1aed668e5c3a91c3e3bf6a60b675221979f0e" />
@@ -161,36 +161,36 @@
 </form>
 <div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
   <p class="caption" role="heading"><span class="caption-text">Introduction</span></p>
-<ul class="current">
+<ul>
 <li class="toctree-l1"><a class="reference internal" href="../../content/installation/">Installation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../content/basic_usage_and_rl/">Basic Usage and Reinforcement Learning</a></li>
-<li class="toctree-l1 current current-page"><a class="current reference internal" href="#">Wrappers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../api/wrappers/">Wrappers</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../content/pubs/">List of publications</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Environments</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../../environments/design/">General Structure</a></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../environments/">Included environments</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../environments/empty_env/">Empty</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../environments/four_rooms_env/">Four rooms</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../environments/door_key_env/">Door &amp; key</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../environments/multiroom_env/">Multi-room</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../environments/fetch_env/">Fetch</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../environments/go_to_door_env/">Go-to-door</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../environments/put_near_env/">Put-near</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../environments/red_and_blue_doors_env/">Red and blue doors</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../environments/memory_env/">Memory</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../environments/locked_room_env/">Locked room</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../environments/key_corridor_env/">Key corridor</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../environments/unlock_env/">Unlock</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../environments/unlock_pickup_env/">Unlock pickup</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../environments/blocked_unlock_pickup_env/">Blocked unlock pickup</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../environments/obstructed_maze_env/">Obstructed maze</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../environments/distributional_shift_env/">Distributional shift</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../environments/lava_gap_env/">Lava gap</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../environments/lava_crossing_env/">Lava crossing</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../environments/simple_crossing_env/">Simple crossing</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../environments/dynamic_obstacles_env/">Dynamic obstacles</a></li>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../design/">General Structure</a></li>
+<li class="toctree-l1 current has-children"><a class="reference internal" href="../">Included environments</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../empty_env/">Empty</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../four_rooms_env/">Four rooms</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../door_key_env/">Door &amp; key</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../multiroom_env/">Multi-room</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../fetch_env/">Fetch</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../go_to_door_env/">Go-to-door</a></li>
+<li class="toctree-l2 current current-page"><a class="current reference internal" href="#">Put-near</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../red_and_blue_doors_env/">Red and blue doors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../memory_env/">Memory</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../locked_room_env/">Locked room</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../key_corridor_env/">Key corridor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../unlock_env/">Unlock</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../unlock_pickup_env/">Unlock pickup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../blocked_unlock_pickup_env/">Blocked unlock pickup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../obstructed_maze_env/">Obstructed maze</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../distributional_shift_env/">Distributional shift</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../lava_gap_env/">Lava gap</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../lava_crossing_env/">Lava crossing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../simple_crossing_env/">Simple crossing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../dynamic_obstacles_env/">Dynamic obstacles</a></li>
 </ul>
 </li>
 </ul>
@@ -232,31 +232,17 @@
           </label>
         </div>
         <article role="main">
-          <section id="wrappers">
-<h1>Wrappers<a class="headerlink" href="#wrappers" title="Permalink to this headline">#</a></h1>
-<p>MiniGrid is built to support tasks involving natural language and sparse rewards.
-The observations are dictionaries, with an ‘image’ field, partially observable
-view of the environment, a ‘mission’ field which is a textual string
-describing the objective the agent should reach to get a reward, and a ‘direction’
-field which can be used as an optional compass. Using dictionaries makes it
-easy for you to add additional information to observations
-if you need to, without having to encode everything into a single tensor.</p>
-<p>There are a variety of wrappers to change the observation format available in <span class="xref myst">gym_minigrid/wrappers.py</span>.
-If your RL code expects one single tensor for observations, take a look at <code class="docutils literal notranslate"><span class="pre">FlatObsWrapper</span></code>.
-There is also an <code class="docutils literal notranslate"><span class="pre">ImgObsWrapper</span></code> that gets rid of the ‘mission’ field in observations, leaving only the image field tensor.</p>
-<p>Please note that the default observation format is a partially observable view of the environment using a
-compact and efficient encoding, with 3 input values per visible grid cell, 7x7x3 values total.
-These values are <strong>not pixels</strong>. If you want to obtain an array of RGB pixels as observations instead,
-use the <code class="docutils literal notranslate"><span class="pre">RGBImgPartialObsWrapper</span></code>. You can use it as follows:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">gym</span>
-<span class="kn">from</span> <span class="nn">gym_minigrid.wrappers</span> <span class="kn">import</span> <span class="n">RGBImgPartialObsWrapper</span><span class="p">,</span> <span class="n">ImgObsWrapper</span>
-
-<span class="n">env</span> <span class="o">=</span> <span class="n">gym</span><span class="o">.</span><span class="n">make</span><span class="p">(</span><span class="s1">&#39;MiniGrid-Empty-8x8-v0&#39;</span><span class="p">)</span>
-<span class="n">env</span> <span class="o">=</span> <span class="n">RGBImgPartialObsWrapper</span><span class="p">(</span><span class="n">env</span><span class="p">)</span> <span class="c1"># Get pixel observations</span>
-<span class="n">env</span> <span class="o">=</span> <span class="n">ImgObsWrapper</span><span class="p">(</span><span class="n">env</span><span class="p">)</span> <span class="c1"># Get rid of the &#39;mission&#39; field</span>
-<span class="n">obs</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">env</span><span class="o">.</span><span class="n">reset</span><span class="p">()</span> <span class="c1"># This now produces an RGB tensor only</span>
-</pre></div>
-</div>
+          <section id="put-near">
+<h1>Put-near<a class="headerlink" href="#put-near" title="Permalink to this headline">#</a></h1>
+<p>The agent is instructed through a textual string to pick up an object and
+place it next to another object. This environment is easy to solve with two
+objects, but difficult to solve with more, as it involves both textual
+understanding and spatial reasoning involving multiple objects.</p>
+<p>Registered configurations:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">MiniGrid-PutNear-6x6-N2-v0</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">MiniGrid-PutNear-8x8-N3-v0</span></code></p></li>
+</ul>
 </section>
 
         </article>
@@ -264,15 +250,23 @@ use the <code class="docutils literal notranslate"><span class="pre">RGBImgParti
       <footer>
         
         <div class="related-pages">
-          
-          <a class="prev-page" href="../../content/basic_usage_and_rl/">
+          <a class="next-page" href="../red_and_blue_doors_env/">
+              <div class="page-info">
+                <div class="context">
+                  <span>Next</span>
+                </div>
+                <div class="title">Red and blue doors</div>
+              </div>
+              <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
+            </a>
+          <a class="prev-page" href="../go_to_door_env/">
               <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
               <div class="page-info">
                 <div class="context">
                   <span>Previous</span>
                 </div>
                 
-                <div class="title">Basic Usage and Reinforcement Learning</div>
+                <div class="title">Go-to-door</div>
                 
               </div>
             </a>

@@ -3,11 +3,11 @@
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
     <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-<link rel="index" title="Index" href="../../genindex/" /><link rel="search" title="Search" href="../../search/" /><link rel="next" title="Included Environments" href="../included_environments/" /><link rel="prev" title="Wrappers" href="../../api/wrappers/" />
-        <link rel="canonical" href="TODO/content/design.html" />
+<link rel="index" title="Index" href="../../genindex/" /><link rel="search" title="Search" href="../../search/" /><link rel="next" title="404" href="../../404/" /><link rel="prev" title="Simple crossing" href="../simple_crossing_env/" />
+        <link rel="canonical" href="TODO/environments/dynamic_obstacles_env.html" />
 
     <link rel="shortcut icon" href="../../_static/favicon.svg"/><meta name="generator" content="sphinx-4.2.0, furo 2022.06.21"/>
-        <title>Design - MiniGrid Documentation</title>
+        <title>Dynamic obstacles - MiniGrid Documentation</title>
       <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/styles/furo.css?digest=40978830699223671f4072448e654b5958f38b89" />
     <link rel="stylesheet" type="text/css" href="../../_static/styles/furo-extensions.css?digest=30d1aed668e5c3a91c3e3bf6a60b675221979f0e" />
@@ -161,24 +161,44 @@
 </form>
 <div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
   <p class="caption" role="heading"><span class="caption-text">Introduction</span></p>
-<ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="../installation/">Installation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../basic_usage/">Basic Usage</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../reinforcement_learning/">Reinforcement Learning</a></li>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../content/installation/">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../content/basic_usage_and_rl/">Basic Usage and Reinforcement Learning</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../api/wrappers/">Wrappers</a></li>
-<li class="toctree-l1 current current-page"><a class="current reference internal" href="#">Design</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../content/pubs/">List of publications</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Environments</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../included_environments/">Included Environments</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../environments/">Distributional shift environment</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../environments/#lava-gap-environment">Lava gap environment</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../environments/#lava-crossing-environment">Lava crossing environment</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../environments/#simple-crossing-environment">Simple crossing environment</a></li>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../design/">General Structure</a></li>
+<li class="toctree-l1 current has-children"><a class="reference internal" href="../">Included environments</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../empty_env/">Empty</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../four_rooms_env/">Four rooms</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../door_key_env/">Door &amp; key</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../multiroom_env/">Multi-room</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../fetch_env/">Fetch</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../go_to_door_env/">Go-to-door</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../put_near_env/">Put-near</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../red_and_blue_doors_env/">Red and blue doors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../memory_env/">Memory</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../locked_room_env/">Locked room</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../key_corridor_env/">Key corridor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../unlock_env/">Unlock</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../unlock_pickup_env/">Unlock pickup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../blocked_unlock_pickup_env/">Blocked unlock pickup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../obstructed_maze_env/">Obstructed maze</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../distributional_shift_env/">Distributional shift</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../lava_gap_env/">Lava gap</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../lava_crossing_env/">Lava crossing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../simple_crossing_env/">Simple crossing</a></li>
+<li class="toctree-l2 current current-page"><a class="current reference internal" href="#">Dynamic obstacles</a></li>
+</ul>
+</li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Development</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference external" href="https://github.com/Farama-Foundation/MiniGrid">Github</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://farama.org/donations">Donate</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../404/">Contribute to the Docs</a></li>
 </ul>
 
 </div>
@@ -212,48 +232,24 @@
           </label>
         </div>
         <article role="main">
-          <section id="design">
-<h1>Design<a class="headerlink" href="#design" title="Permalink to this headline">#</a></h1>
-<p>Structure of the world:</p>
+          <section id="dynamic-obstacles">
+<h1>Dynamic obstacles<a class="headerlink" href="#dynamic-obstacles" title="Permalink to this headline">#</a></h1>
+<p>This environment is an empty room with moving obstacles.
+The goal of the agent is to reach the green goal square without colliding with any obstacle.
+A large penalty is subtracted if the agent collides with an obstacle and the episode finishes.
+This environment is useful to test Dynamic Obstacle Avoidance for mobile robots with Reinforcement Learning in Partial Observability.</p>
+<figure class="align-default">
+<img alt="GIF of the Dynamic Obstacles environment" src="../../_images/dynamic_obstacles.gif" />
+</figure>
+<p>Registered configurations:</p>
 <ul class="simple">
-<li><p>The world is an NxM grid of tiles</p></li>
-<li><p>Each tile in the grid world contains zero or one object</p>
-<ul>
-<li><p>Cells that do not contain an object have the value <code class="docutils literal notranslate"><span class="pre">None</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">MiniGrid-Dynamic-Obstacles-5x5-v0</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">MiniGrid-Dynamic-Obstacles-Random-5x5-v0</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">MiniGrid-Dynamic-Obstacles-6x6-v0</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">MiniGrid-Dynamic-Obstacles-Random-6x6-v0</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">MiniGrid-Dynamic-Obstacles-8x8-v0</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">MiniGrid-Dynamic-Obstacles-16x16-v0</span></code></p></li>
 </ul>
-</li>
-<li><p>Each object has an associated discrete color (string)</p></li>
-<li><p>Each object has an associated type (string)</p>
-<ul>
-<li><p>Provided object types are: wall, floor, lava, door, key, ball, box and goal</p></li>
-</ul>
-</li>
-<li><p>The agent can pick up and carry exactly one object (eg: ball or key)</p></li>
-<li><p>To open a locked door, the agent has to be carrying a key matching the door’s color</p></li>
-</ul>
-<p>Actions in the basic environment:</p>
-<ul class="simple">
-<li><p>Turn left</p></li>
-<li><p>Turn right</p></li>
-<li><p>Move forward</p></li>
-<li><p>Pick up an object</p></li>
-<li><p>Drop the object being carried</p></li>
-<li><p>Toggle (open doors, interact with objects)</p></li>
-<li><p>Done (task completed, optional)</p></li>
-</ul>
-<p>Default tile/observation encoding:</p>
-<ul class="simple">
-<li><p>Each tile is encoded as a 3 dimensional tuple: <code class="docutils literal notranslate"><span class="pre">(OBJECT_IDX,</span> <span class="pre">COLOR_IDX,</span> <span class="pre">STATE)</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">OBJECT_TO_IDX</span></code> and <code class="docutils literal notranslate"><span class="pre">COLOR_TO_IDX</span></code> mapping can be found in <span class="xref myst">gym_minigrid/minigrid.py</span></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">STATE</span></code> refers to the door state with 0=open, 1=closed and 2=locked</p></li>
-</ul>
-<p>By default, sparse rewards are given for reaching a green goal tile. A
-reward of 1 is given for success, and zero for failure. There is also an
-environment-specific time step limit for completing the task.
-You can define your own reward function by creating a class derived
-from <code class="docutils literal notranslate"><span class="pre">MiniGridEnv</span></code>. Extending the environment with new object types or new actions
-should be very easy. If you wish to do this, you should take a look at the
-<span class="xref myst">gym_minigrid/minigrid.py</span> source file.</p>
 </section>
 
         </article>
@@ -261,16 +257,26 @@ should be very easy. If you wish to do this, you should take a look at the
       <footer>
         
         <div class="related-pages">
-          <a class="next-page" href="../included_environments/">
+          <a class="next-page" href="../../404/">
               <div class="page-info">
                 <div class="context">
                   <span>Next</span>
                 </div>
-                <div class="title">Included Environments</div>
+                <div class="title">404</div>
               </div>
               <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
             </a>
-          
+          <a class="prev-page" href="../simple_crossing_env/">
+              <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
+              <div class="page-info">
+                <div class="context">
+                  <span>Previous</span>
+                </div>
+                
+                <div class="title">Simple crossing</div>
+                
+              </div>
+            </a>
         </div>
         <div class="bottom-of-page">
           <div class="left-details">

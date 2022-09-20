@@ -3,11 +3,11 @@
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
     <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-<link rel="index" title="Index" href="../../genindex/" /><link rel="search" title="Search" href="../../search/" /><link rel="next" title="Reinforcement Learning" href="../reinforcement_learning/" /><link rel="prev" title="Installation" href="../installation/" />
-        <link rel="canonical" href="TODO/content/basic_usage.html" />
+<link rel="index" title="Index" href="../../genindex/" /><link rel="search" title="Search" href="../../search/" /><link rel="next" title="Lava crossing" href="../lava_crossing_env/" /><link rel="prev" title="Distributional shift" href="../distributional_shift_env/" />
+        <link rel="canonical" href="TODO/environments/lava_gap_env.html" />
 
     <link rel="shortcut icon" href="../../_static/favicon.svg"/><meta name="generator" content="sphinx-4.2.0, furo 2022.06.21"/>
-        <title>Basic Usage - MiniGrid Documentation</title>
+        <title>Lava gap - MiniGrid Documentation</title>
       <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/styles/furo.css?digest=40978830699223671f4072448e654b5958f38b89" />
     <link rel="stylesheet" type="text/css" href="../../_static/styles/furo-extensions.css?digest=30d1aed668e5c3a91c3e3bf6a60b675221979f0e" />
@@ -161,24 +161,44 @@
 </form>
 <div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
   <p class="caption" role="heading"><span class="caption-text">Introduction</span></p>
-<ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="../installation/">Installation</a></li>
-<li class="toctree-l1 current current-page"><a class="current reference internal" href="#">Basic Usage</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../reinforcement_learning/">Reinforcement Learning</a></li>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../content/installation/">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../content/basic_usage_and_rl/">Basic Usage and Reinforcement Learning</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../api/wrappers/">Wrappers</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../design/">Design</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../content/pubs/">List of publications</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Environments</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../included_environments/">Included Environments</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../environments/">Distributional shift environment</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../environments/#lava-gap-environment">Lava gap environment</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../environments/#lava-crossing-environment">Lava crossing environment</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../environments/#simple-crossing-environment">Simple crossing environment</a></li>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../design/">General Structure</a></li>
+<li class="toctree-l1 current has-children"><a class="reference internal" href="../">Included environments</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../empty_env/">Empty</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../four_rooms_env/">Four rooms</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../door_key_env/">Door &amp; key</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../multiroom_env/">Multi-room</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../fetch_env/">Fetch</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../go_to_door_env/">Go-to-door</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../put_near_env/">Put-near</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../red_and_blue_doors_env/">Red and blue doors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../memory_env/">Memory</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../locked_room_env/">Locked room</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../key_corridor_env/">Key corridor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../unlock_env/">Unlock</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../unlock_pickup_env/">Unlock pickup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../blocked_unlock_pickup_env/">Blocked unlock pickup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../obstructed_maze_env/">Obstructed maze</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../distributional_shift_env/">Distributional shift</a></li>
+<li class="toctree-l2 current current-page"><a class="current reference internal" href="#">Lava gap</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../lava_crossing_env/">Lava crossing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../simple_crossing_env/">Simple crossing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../dynamic_obstacles_env/">Dynamic obstacles</a></li>
+</ul>
+</li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Development</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference external" href="https://github.com/Farama-Foundation/MiniGrid">Github</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://farama.org/donations">Donate</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../404/">Contribute to the Docs</a></li>
 </ul>
 
 </div>
@@ -212,16 +232,21 @@
           </label>
         </div>
         <article role="main">
-          <section id="basic-usage">
-<h1>Basic Usage<a class="headerlink" href="#basic-usage" title="Permalink to this headline">#</a></h1>
-<p>There is a UI application which allows you to manually control the agent with the arrow keys:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">./</span><span class="n">gym</span><span class="o">-</span><span class="n">minigrid</span><span class="o">/</span><span class="n">manual_control</span><span class="o">.</span><span class="n">py</span>
-</pre></div>
-</div>
-<p>The environment being run can be selected with the <code class="docutils literal notranslate"><span class="pre">--env</span></code> option, eg:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">./</span><span class="n">gym</span><span class="o">-</span><span class="n">minigrid</span><span class="o">/</span><span class="n">manual_control</span><span class="o">.</span><span class="n">py</span> <span class="o">--</span><span class="n">env</span> <span class="n">MiniGrid</span><span class="o">-</span><span class="n">Empty</span><span class="o">-</span><span class="mi">8</span><span class="n">x8</span><span class="o">-</span><span class="n">v0</span>
-</pre></div>
-</div>
+          <section id="lava-gap">
+<h1>Lava gap<a class="headerlink" href="#lava-gap" title="Permalink to this headline">#</a></h1>
+<p>The agent has to reach the green goal square at the opposite corner of the room,
+and must pass through a narrow gap in a vertical strip of deadly lava. Touching
+the lava terminate the episode with a zero reward. This environment is useful
+for studying safety and safe exploration.</p>
+<p>Registered configurations:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">MiniGrid-LavaGapS5-v0</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">MiniGrid-LavaGapS6-v0</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">MiniGrid-LavaGapS7-v0</span></code></p></li>
+</ul>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../../_images/LavaGapS6.png"><img alt="Figure of the LavaGap environment" src="../../_images/LavaGapS6.png" style="width: 200px;" /></a>
+</figure>
 </section>
 
         </article>
@@ -229,16 +254,26 @@
       <footer>
         
         <div class="related-pages">
-          <a class="next-page" href="../reinforcement_learning/">
+          <a class="next-page" href="../lava_crossing_env/">
               <div class="page-info">
                 <div class="context">
                   <span>Next</span>
                 </div>
-                <div class="title">Reinforcement Learning</div>
+                <div class="title">Lava crossing</div>
               </div>
               <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
             </a>
-          
+          <a class="prev-page" href="../distributional_shift_env/">
+              <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
+              <div class="page-info">
+                <div class="context">
+                  <span>Previous</span>
+                </div>
+                
+                <div class="title">Distributional shift</div>
+                
+              </div>
+            </a>
         </div>
         <div class="bottom-of-page">
           <div class="left-details">

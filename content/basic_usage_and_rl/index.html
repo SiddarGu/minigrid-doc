@@ -3,11 +3,11 @@
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
     <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-<link rel="index" title="Index" href="../../genindex/" /><link rel="search" title="Search" href="../../search/" /><link rel="next" title="List of publications" href="../../content/pubs/" /><link rel="prev" title="Basic Usage and Reinforcement Learning" href="../../content/basic_usage_and_rl/" />
-        <link rel="canonical" href="TODO/api/wrappers.html" />
+<link rel="index" title="Index" href="../../genindex/" /><link rel="search" title="Search" href="../../search/" /><link rel="next" title="Wrappers" href="../../api/wrappers/" /><link rel="prev" title="Installation" href="../installation/" />
+        <link rel="canonical" href="TODO/content/basic_usage_and_rl.html" />
 
     <link rel="shortcut icon" href="../../_static/favicon.svg"/><meta name="generator" content="sphinx-4.2.0, furo 2022.06.21"/>
-        <title>Wrappers - MiniGrid Documentation</title>
+        <title>Basic Usage and Reinforcement Learning - MiniGrid Documentation</title>
       <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/styles/furo.css?digest=40978830699223671f4072448e654b5958f38b89" />
     <link rel="stylesheet" type="text/css" href="../../_static/styles/furo-extensions.css?digest=30d1aed668e5c3a91c3e3bf6a60b675221979f0e" />
@@ -136,7 +136,7 @@
           <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
         </button>
       </div>
-      <label class="toc-overlay-icon toc-header-icon no-toc" for="__toc">
+      <label class="toc-overlay-icon toc-header-icon" for="__toc">
         <div class="visually-hidden">Toggle table of contents sidebar</div>
         <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
       </label>
@@ -162,10 +162,10 @@
 <div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
   <p class="caption" role="heading"><span class="caption-text">Introduction</span></p>
 <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="../../content/installation/">Installation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../content/basic_usage_and_rl/">Basic Usage and Reinforcement Learning</a></li>
-<li class="toctree-l1 current current-page"><a class="current reference internal" href="#">Wrappers</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../content/pubs/">List of publications</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../installation/">Installation</a></li>
+<li class="toctree-l1 current current-page"><a class="current reference internal" href="#">Basic Usage and Reinforcement Learning</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../api/wrappers/">Wrappers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pubs/">List of publications</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Environments</span></p>
 <ul>
@@ -226,37 +226,35 @@
               <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
             </button>
           </div>
-          <label class="toc-overlay-icon toc-content-icon no-toc" for="__toc">
+          <label class="toc-overlay-icon toc-content-icon" for="__toc">
             <div class="visually-hidden">Toggle table of contents sidebar</div>
             <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
           </label>
         </div>
         <article role="main">
-          <section id="wrappers">
-<h1>Wrappers<a class="headerlink" href="#wrappers" title="Permalink to this headline">#</a></h1>
-<p>MiniGrid is built to support tasks involving natural language and sparse rewards.
-The observations are dictionaries, with an ‘image’ field, partially observable
-view of the environment, a ‘mission’ field which is a textual string
-describing the objective the agent should reach to get a reward, and a ‘direction’
-field which can be used as an optional compass. Using dictionaries makes it
-easy for you to add additional information to observations
-if you need to, without having to encode everything into a single tensor.</p>
-<p>There are a variety of wrappers to change the observation format available in <span class="xref myst">gym_minigrid/wrappers.py</span>.
-If your RL code expects one single tensor for observations, take a look at <code class="docutils literal notranslate"><span class="pre">FlatObsWrapper</span></code>.
-There is also an <code class="docutils literal notranslate"><span class="pre">ImgObsWrapper</span></code> that gets rid of the ‘mission’ field in observations, leaving only the image field tensor.</p>
-<p>Please note that the default observation format is a partially observable view of the environment using a
-compact and efficient encoding, with 3 input values per visible grid cell, 7x7x3 values total.
-These values are <strong>not pixels</strong>. If you want to obtain an array of RGB pixels as observations instead,
-use the <code class="docutils literal notranslate"><span class="pre">RGBImgPartialObsWrapper</span></code>. You can use it as follows:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">gym</span>
-<span class="kn">from</span> <span class="nn">gym_minigrid.wrappers</span> <span class="kn">import</span> <span class="n">RGBImgPartialObsWrapper</span><span class="p">,</span> <span class="n">ImgObsWrapper</span>
-
-<span class="n">env</span> <span class="o">=</span> <span class="n">gym</span><span class="o">.</span><span class="n">make</span><span class="p">(</span><span class="s1">&#39;MiniGrid-Empty-8x8-v0&#39;</span><span class="p">)</span>
-<span class="n">env</span> <span class="o">=</span> <span class="n">RGBImgPartialObsWrapper</span><span class="p">(</span><span class="n">env</span><span class="p">)</span> <span class="c1"># Get pixel observations</span>
-<span class="n">env</span> <span class="o">=</span> <span class="n">ImgObsWrapper</span><span class="p">(</span><span class="n">env</span><span class="p">)</span> <span class="c1"># Get rid of the &#39;mission&#39; field</span>
-<span class="n">obs</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">env</span><span class="o">.</span><span class="n">reset</span><span class="p">()</span> <span class="c1"># This now produces an RGB tensor only</span>
+          <section id="basic-usage-and-reinforcement-learning">
+<h1>Basic Usage and Reinforcement Learning<a class="headerlink" href="#basic-usage-and-reinforcement-learning" title="Permalink to this headline">#</a></h1>
+<section id="basic-usage">
+<h2>Basic Usage<a class="headerlink" href="#basic-usage" title="Permalink to this headline">#</a></h2>
+<p>There is a UI application which allows you to manually control the agent with the arrow keys:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">./</span><span class="n">gym</span><span class="o">-</span><span class="n">minigrid</span><span class="o">/</span><span class="n">manual_control</span><span class="o">.</span><span class="n">py</span>
 </pre></div>
 </div>
+<p>The environment being run can be selected with the <code class="docutils literal notranslate"><span class="pre">--env</span></code> option, eg:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">./</span><span class="n">gym</span><span class="o">-</span><span class="n">minigrid</span><span class="o">/</span><span class="n">manual_control</span><span class="o">.</span><span class="n">py</span> <span class="o">--</span><span class="n">env</span> <span class="n">MiniGrid</span><span class="o">-</span><span class="n">Empty</span><span class="o">-</span><span class="mi">8</span><span class="n">x8</span><span class="o">-</span><span class="n">v0</span>
+</pre></div>
+</div>
+</section>
+<section id="reinforcement-learning">
+<h2>Reinforcement Learning<a class="headerlink" href="#reinforcement-learning" title="Permalink to this headline">#</a></h2>
+<p>If you want to train an agent with reinforcement learning, I recommend using the code found in the <a class="reference external" href="https://github.com/lcswillems/torch-rl">torch-rl</a> repository.
+This code has been tested and is known to work with this environment. The default hyper-parameters are also known to converge.</p>
+<p>A sample training command is:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="n">torch</span><span class="o">-</span><span class="n">rl</span>
+<span class="n">python3</span> <span class="o">-</span><span class="n">m</span> <span class="n">scripts</span><span class="o">.</span><span class="n">train</span> <span class="o">--</span><span class="n">env</span> <span class="n">MiniGrid</span><span class="o">-</span><span class="n">Empty</span><span class="o">-</span><span class="mi">8</span><span class="n">x8</span><span class="o">-</span><span class="n">v0</span> <span class="o">--</span><span class="n">algo</span> <span class="n">ppo</span>
+</pre></div>
+</div>
+</section>
 </section>
 
         </article>
@@ -264,18 +262,16 @@ use the <code class="docutils literal notranslate"><span class="pre">RGBImgParti
       <footer>
         
         <div class="related-pages">
-          
-          <a class="prev-page" href="../../content/basic_usage_and_rl/">
-              <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
+          <a class="next-page" href="../../api/wrappers/">
               <div class="page-info">
                 <div class="context">
-                  <span>Previous</span>
+                  <span>Next</span>
                 </div>
-                
-                <div class="title">Basic Usage and Reinforcement Learning</div>
-                
+                <div class="title">Wrappers</div>
               </div>
+              <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
             </a>
+          
         </div>
         <div class="bottom-of-page">
           <div class="left-details">
@@ -296,8 +292,28 @@ use the <code class="docutils literal notranslate"><span class="pre">RGBImgParti
         
       </footer>
     </div>
-    <aside class="toc-drawer no-toc">
+    <aside class="toc-drawer">
       
+      
+      <div class="toc-sticky toc-scroll">
+        <div class="toc-title-container">
+          <span class="toc-title">
+            On this page
+          </span>
+        </div>
+        <div class="toc-tree-container">
+          <div class="toc-tree">
+            <ul>
+<li><a class="reference internal" href="#">Basic Usage and Reinforcement Learning</a><ul>
+<li><a class="reference internal" href="#basic-usage">Basic Usage</a></li>
+<li><a class="reference internal" href="#reinforcement-learning">Reinforcement Learning</a></li>
+</ul>
+</li>
+</ul>
+
+          </div>
+        </div>
+      </div>
       
       
     </aside>

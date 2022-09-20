@@ -3,11 +3,11 @@
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
     <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-<link rel="index" title="Index" href="../../genindex/" /><link rel="search" title="Search" href="../../search/" /><link rel="prev" title="Included Environments" href="../included_environments/" />
-        <link rel="canonical" href="TODO/content/environments.html" />
+<link rel="index" title="Index" href="../../genindex/" /><link rel="search" title="Search" href="../../search/" /><link rel="next" title="Unlock pickup" href="../unlock_pickup_env/" /><link rel="prev" title="Key corridor" href="../key_corridor_env/" />
+        <link rel="canonical" href="TODO/environments/unlock_env.html" />
 
     <link rel="shortcut icon" href="../../_static/favicon.svg"/><meta name="generator" content="sphinx-4.2.0, furo 2022.06.21"/>
-        <title>Distributional shift environment - MiniGrid Documentation</title>
+        <title>Unlock - MiniGrid Documentation</title>
       <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/styles/furo.css?digest=40978830699223671f4072448e654b5958f38b89" />
     <link rel="stylesheet" type="text/css" href="../../_static/styles/furo-extensions.css?digest=30d1aed668e5c3a91c3e3bf6a60b675221979f0e" />
@@ -162,23 +162,43 @@
 <div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
   <p class="caption" role="heading"><span class="caption-text">Introduction</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../installation/">Installation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../basic_usage/">Basic Usage</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../reinforcement_learning/">Reinforcement Learning</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../content/installation/">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../content/basic_usage_and_rl/">Basic Usage and Reinforcement Learning</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../api/wrappers/">Wrappers</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../design/">Design</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../content/pubs/">List of publications</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Environments</span></p>
 <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="../included_environments/">Included Environments</a></li>
-<li class="toctree-l1 current current-page"><a class="current reference internal" href="#">Distributional shift environment</a></li>
-<li class="toctree-l1"><a class="reference internal" href="#lava-gap-environment">Lava gap environment</a></li>
-<li class="toctree-l1"><a class="reference internal" href="#lava-crossing-environment">Lava crossing environment</a></li>
-<li class="toctree-l1"><a class="reference internal" href="#simple-crossing-environment">Simple crossing environment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../design/">General Structure</a></li>
+<li class="toctree-l1 current has-children"><a class="reference internal" href="../">Included environments</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../empty_env/">Empty</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../four_rooms_env/">Four rooms</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../door_key_env/">Door &amp; key</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../multiroom_env/">Multi-room</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../fetch_env/">Fetch</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../go_to_door_env/">Go-to-door</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../put_near_env/">Put-near</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../red_and_blue_doors_env/">Red and blue doors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../memory_env/">Memory</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../locked_room_env/">Locked room</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../key_corridor_env/">Key corridor</a></li>
+<li class="toctree-l2 current current-page"><a class="current reference internal" href="#">Unlock</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../unlock_pickup_env/">Unlock pickup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../blocked_unlock_pickup_env/">Blocked unlock pickup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../obstructed_maze_env/">Obstructed maze</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../distributional_shift_env/">Distributional shift</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../lava_gap_env/">Lava gap</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../lava_crossing_env/">Lava crossing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../simple_crossing_env/">Simple crossing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../dynamic_obstacles_env/">Dynamic obstacles</a></li>
+</ul>
+</li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Development</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference external" href="https://github.com/Farama-Foundation/MiniGrid">Github</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://farama.org/donations">Donate</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../404/">Contribute to the Docs</a></li>
 </ul>
 
 </div>
@@ -212,112 +232,17 @@
           </label>
         </div>
         <article role="main">
-          <section id="distributional-shift-environment">
-<h1>Distributional shift environment<a class="headerlink" href="#distributional-shift-environment" title="Permalink to this headline">#</a></h1>
-<p>This environment is based on one of the DeepMind <a class="reference external" href="https://github.com/deepmind/ai-safety-gridworlds">AI safety gridworlds</a>.
-The agent starts in the top-left corner and must reach the goal which is in the top-right corner, but has to avoid stepping
-into lava on its way. The aim of this environment is to test an agent’s ability to generalize. There are two slightly
-different variants of the environment, so that the agent can be trained on one variant and tested on the other.</p>
+          <section id="unlock">
+<h1>Unlock<a class="headerlink" href="#unlock" title="Permalink to this headline">#</a></h1>
+<p>The agent has to open a locked door. This environment can be solved without
+relying on language.</p>
 <figure class="align-default">
-<a class="reference internal image-reference" href="../../_images/DistShift1.png"><img alt="Figure of the DistShift1 environment" src="../../_images/DistShift1.png" style="width: 200px;" /></a>
-</figure>
-<figure class="align-default">
-<a class="reference internal image-reference" href="../../_images/DistShift2.png"><img alt="Figure of the DistShift2 environment" src="../../_images/DistShift2.png" style="width: 200px;" /></a>
+<a class="reference internal image-reference" href="../../_images/Unlock.png"><img alt="Figure of the unlock environment" src="../../_images/Unlock.png" style="width: 200px;" /></a>
 </figure>
 <p>Registered configurations:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">MiniGrid-DistShift1-v0</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">MiniGrid-DistShift2-v0</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">MiniGrid-Unlock-v0</span></code></p></li>
 </ul>
-</section>
-<section id="lava-gap-environment">
-<h1>Lava gap environment<a class="headerlink" href="#lava-gap-environment" title="Permalink to this headline">#</a></h1>
-<p>The agent has to reach the green goal square at the opposite corner of the room,
-and must pass through a narrow gap in a vertical strip of deadly lava. Touching
-the lava terminate the episode with a zero reward. This environment is useful
-for studying safety and safe exploration.</p>
-<p>Registered configurations:</p>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">MiniGrid-LavaGapS5-v0</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">MiniGrid-LavaGapS6-v0</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">MiniGrid-LavaGapS7-v0</span></code></p></li>
-</ul>
-<figure class="align-default">
-<a class="reference internal image-reference" href="../../_images/LavaGapS6.png"><img alt="Figure of the LavaGap environment" src="../../_images/LavaGapS6.png" style="width: 200px;" /></a>
-</figure>
-</section>
-<section id="lava-crossing-environment">
-<h1>Lava crossing environment<a class="headerlink" href="#lava-crossing-environment" title="Permalink to this headline">#</a></h1>
-<p>The agent has to reach the green goal square on the other corner of the room
-while avoiding rivers of deadly lava which terminate the episode in failure.
-Each lava stream runs across the room either horizontally or vertically, and
-has a single crossing point which can be safely used;  Luckily, a path to the
-goal is guaranteed to exist. This environment is useful for studying safety and
-safe exploration.</p>
-<figure class="align-default">
-<a class="reference internal image-reference" href="../../_images/LavaCrossingS9N1.png"><img alt="Figure of the LavaCrossingS9N1 environment" src="../../_images/LavaCrossingS9N1.png" style="width: 200px;" /></a>
-</figure>
-<figure class="align-default">
-<a class="reference internal image-reference" href="../../_images/LavaCrossingS9N2.png"><img alt="Figure of the LavaCrossingS9N2 environment" src="../../_images/LavaCrossingS9N2.png" style="width: 200px;" /></a>
-</figure>
-<figure class="align-default">
-<a class="reference internal image-reference" href="../../_images/LavaCrossingS9N3.png"><img alt="Figure of the LavaCrossingS9N3 environment" src="../../_images/LavaCrossingS9N3.png" style="width: 200px;" /></a>
-</figure>
-<figure class="align-default">
-<a class="reference internal image-reference" href="../../_images/LavaCrossingS11N5.png"><img alt="Figure of the LavaCrossingS11N5 environment" src="../../_images/LavaCrossingS11N5.png" style="width: 250px;" /></a>
-</figure>
-<p>Registered configurations:</p>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">MiniGrid-LavaCrossingS9N1-v0</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">MiniGrid-LavaCrossingS9N2-v0</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">MiniGrid-LavaCrossingS9N3-v0</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">MiniGrid-LavaCrossingS11N5-v0</span></code></p></li>
-</ul>
-</section>
-<section id="simple-crossing-environment">
-<h1>Simple crossing environment<a class="headerlink" href="#simple-crossing-environment" title="Permalink to this headline">#</a></h1>
-<p>Similar to the <code class="docutils literal notranslate"><span class="pre">LavaCrossing</span></code> environment, the agent has to reach the green
-goal square on the other corner of the room, however lava is replaced by
-walls. This MDP is therefore much easier and maybe useful for quickly
-testing your algorithms.</p>
-<figure class="align-default">
-<a class="reference internal image-reference" href="../../_images/SimpleCrossingS9N1.png"><img alt="Figure of the SimpleCrossingS9N1 environment" src="../../_images/SimpleCrossingS9N1.png" style="width: 200px;" /></a>
-</figure>
-<figure class="align-default">
-<a class="reference internal image-reference" href="../../_images/SimpleCrossingS9N2.png"><img alt="Figure of the SimpleCrossingS9N2 environment" src="../../_images/SimpleCrossingS9N2.png" style="width: 200px;" /></a>
-</figure>
-<figure class="align-default">
-<a class="reference internal image-reference" href="../../_images/SimpleCrossingS9N3.png"><img alt="Figure of the SimpleCrossingS9N3 environment" src="../../_images/SimpleCrossingS9N3.png" style="width: 200px;" /></a>
-</figure>
-<figure class="align-default">
-<a class="reference internal image-reference" href="../../_images/SimpleCrossingS11N5.png"><img alt="Figure of the SimpleCrossingS11N5 environment" src="../../_images/SimpleCrossingS11N5.png" style="width: 250px;" /></a>
-</figure>
-<p>Registered configurations:</p>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">MiniGrid-SimpleCrossingS9N1-v0</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">MiniGrid-SimpleCrossingS9N2-v0</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">MiniGrid-SimpleCrossingS9N3-v0</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">MiniGrid-SimpleCrossingS11N5-v0</span></code></p></li>
-</ul>
-<section id="dynamic-obstacles-environment">
-<h2>Dynamic obstacles environment<a class="headerlink" href="#dynamic-obstacles-environment" title="Permalink to this headline">#</a></h2>
-<p>This environment is an empty room with moving obstacles.
-The goal of the agent is to reach the green goal square without colliding with any obstacle.
-A large penalty is subtracted if the agent collides with an obstacle and the episode finishes.
-This environment is useful to test Dynamic Obstacle Avoidance for mobile robots with Reinforcement Learning in Partial Observability.</p>
-<figure class="align-default">
-<img alt="GIF of the Dynamic Obstacles environment" src="../../_images/dynamic_obstacles.gif" />
-</figure>
-<p>Registered configurations:</p>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">MiniGrid-Dynamic-Obstacles-5x5-v0</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">MiniGrid-Dynamic-Obstacles-Random-5x5-v0</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">MiniGrid-Dynamic-Obstacles-6x6-v0</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">MiniGrid-Dynamic-Obstacles-Random-6x6-v0</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">MiniGrid-Dynamic-Obstacles-8x8-v0</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">MiniGrid-Dynamic-Obstacles-16x16-v0</span></code></p></li>
-</ul>
-</section>
 </section>
 
         </article>
@@ -325,8 +250,26 @@ This environment is useful to test Dynamic Obstacle Avoidance for mobile robots 
       <footer>
         
         <div class="related-pages">
-          
-          
+          <a class="next-page" href="../unlock_pickup_env/">
+              <div class="page-info">
+                <div class="context">
+                  <span>Next</span>
+                </div>
+                <div class="title">Unlock pickup</div>
+              </div>
+              <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
+            </a>
+          <a class="prev-page" href="../key_corridor_env/">
+              <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
+              <div class="page-info">
+                <div class="context">
+                  <span>Previous</span>
+                </div>
+                
+                <div class="title">Key corridor</div>
+                
+              </div>
+            </a>
         </div>
         <div class="bottom-of-page">
           <div class="left-details">
