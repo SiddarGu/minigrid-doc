@@ -4,7 +4,7 @@ title: Design
 firstpage:
 ---
 
-# Design
+# General Structure
 
 Structure of the world:
 - The world is an NxM grid of tiles
