@@ -241,7 +241,7 @@ describing the objective the agent should reach to get a reward, and a ‘direct
 field which can be used as an optional compass. Using dictionaries makes it
 easy for you to add additional information to observations
 if you need to, without having to encode everything into a single tensor.</p>
-<p>There are a variety of wrappers to change the observation format available in <span class="xref myst">gym_minigrid/wrappers.py</span>.
+<p>There are a variety of wrappers to change the observation format available in <span class="xref myst">minigrid/wrappers.py</span>.
 If your RL code expects one single tensor for observations, take a look at <code class="docutils literal notranslate"><span class="pre">FlatObsWrapper</span></code>.
 There is also an <code class="docutils literal notranslate"><span class="pre">ImgObsWrapper</span></code> that gets rid of the ‘mission’ field in observations, leaving only the image field tensor.</p>
 <p>Please note that the default observation format is a partially observable view of the environment using a
@@ -249,7 +249,7 @@ compact and efficient encoding, with 3 input values per visible grid cell, 7x7x3
 These values are <strong>not pixels</strong>. If you want to obtain an array of RGB pixels as observations instead,
 use the <code class="docutils literal notranslate"><span class="pre">RGBImgPartialObsWrapper</span></code>. You can use it as follows:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">gym</span>
-<span class="kn">from</span> <span class="nn">gym_minigrid.wrappers</span> <span class="kn">import</span> <span class="n">RGBImgPartialObsWrapper</span><span class="p">,</span> <span class="n">ImgObsWrapper</span>
+<span class="kn">from</span> <span class="nn">minigrid.wrappers</span> <span class="kn">import</span> <span class="n">RGBImgPartialObsWrapper</span><span class="p">,</span> <span class="n">ImgObsWrapper</span>
 
 <span class="n">env</span> <span class="o">=</span> <span class="n">gym</span><span class="o">.</span><span class="n">make</span><span class="p">(</span><span class="s1">&#39;MiniGrid-Empty-8x8-v0&#39;</span><span class="p">)</span>
 <span class="n">env</span> <span class="o">=</span> <span class="n">RGBImgPartialObsWrapper</span><span class="p">(</span><span class="n">env</span><span class="p">)</span> <span class="c1"># Get pixel observations</span>

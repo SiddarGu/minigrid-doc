@@ -264,7 +264,7 @@
 <p>Default tile/observation encoding:</p>
 <ul class="simple">
 <li><p>Each tile is encoded as a 3 dimensional tuple: <code class="docutils literal notranslate"><span class="pre">(OBJECT_IDX,</span> <span class="pre">COLOR_IDX,</span> <span class="pre">STATE)</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">OBJECT_TO_IDX</span></code> and <code class="docutils literal notranslate"><span class="pre">COLOR_TO_IDX</span></code> mapping can be found in <span class="xref myst">gym_minigrid/minigrid.py</span></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">OBJECT_TO_IDX</span></code> and <code class="docutils literal notranslate"><span class="pre">COLOR_TO_IDX</span></code> mapping can be found in <span class="xref myst">minigrid/minigrid.py</span></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">STATE</span></code> refers to the door state with 0=open, 1=closed and 2=locked</p></li>
 </ul>
 <p>By default, sparse rewards are given for reaching a green goal tile. A
@@ -273,7 +273,7 @@ environment-specific time step limit for completing the task.
 You can define your own reward function by creating a class derived
 from <code class="docutils literal notranslate"><span class="pre">MiniGridEnv</span></code>. Extending the environment with new object types or new actions
 should be very easy. If you wish to do this, you should take a look at the
-<span class="xref myst">gym_minigrid/minigrid.py</span> source file.</p>
+<span class="xref myst">minigrid/minigrid.py</span> source file.</p>
 </section>
 
         </article>
