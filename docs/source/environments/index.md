@@ -5,7 +5,7 @@ lastpage:
 
 # Included environments
 
-The environments listed below are implemented in the [gym_minigrid/envs](/gym_minigrid/envs) directory.
+The environments listed below are implemented in the [minigrid/envs](/minigrid/envs) directory.
 Each environment provides one or more configurations registered with OpenAI gym. Each environment
 is also programmatically tunable in terms of size/complexity, which is useful for curriculum learning
 or to fine-tune difficulty.

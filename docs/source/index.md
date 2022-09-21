@@ -26,13 +26,13 @@ Requirements:
 Please use this bibtex if you want to cite this repository in your publications:
 
 ```
-@misc{gym_minigrid,
+@misc{minigrid,
   author = {Chevalier-Boisvert, Maxime and Willems, Lucas and Pal, Suman},
-  title = {Minimalistic Gridworld Environment for OpenAI Gym},
+  title = {Minimalistic Gridworld Environment for Gymnasium},
   year = {2018},
   publisher = {GitHub},
   journal = {GitHub repository},
-  howpublished = {\url{https://github.com/maximecb/gym-minigrid}},
+  howpublished = {\url{https://github.com/Farama-Foundation/MiniGrid}},
 }
 ```
 
