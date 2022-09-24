@@ -3,11 +3,11 @@
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
     <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-<link rel="index" title="Index" href="../../genindex/" /><link rel="search" title="Search" href="../../search/" /><link rel="next" title="Included environments" href="../" /><link rel="prev" title="List of publications" href="../../content/pubs/" />
-        <link rel="canonical" href="TODO/environments/design.html" />
+<link rel="index" title="Index" href="../../genindex/" /><link rel="search" title="Search" href="../../search/" /><link rel="next" title="Dynamic" href="../dynamic/" /><link rel="prev" title="Lava Gap S7" href="../lava_gap_s7/" />
+        <link rel="canonical" href="TODO/environments/simple_crossing_s11_n5.html" />
 
     <link rel="shortcut icon" href="../../_static/favicon.svg"/><meta name="generator" content="sphinx-4.2.0, furo 2022.06.21"/>
-        <title>General Structure - MiniGrid Documentation</title>
+        <title>Simple Crossing S11 N5 - MiniGrid Documentation</title>
       <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/styles/furo.css?digest=40978830699223671f4072448e654b5958f38b89" />
     <link rel="stylesheet" type="text/css" href="../../_static/styles/furo-extensions.css?digest=30d1aed668e5c3a91c3e3bf6a60b675221979f0e" />
@@ -136,7 +136,7 @@
           <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
         </button>
       </div>
-      <label class="toc-overlay-icon toc-header-icon no-toc" for="__toc">
+      <label class="toc-overlay-icon toc-header-icon" for="__toc">
         <div class="visually-hidden">Toggle table of contents sidebar</div>
         <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
       </label>
@@ -169,8 +169,8 @@
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Environments</span></p>
 <ul class="current">
-<li class="toctree-l1 current current-page"><a class="current reference internal" href="#">General Structure</a></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../">Included environments</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l1"><a class="reference internal" href="../design/">General Structure</a></li>
+<li class="toctree-l1 current has-children"><a class="reference internal" href="../">Included environments</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../empty/">Empty</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../four_rooms/">Four Rooms</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../door_key/">Door Key</a></li>
@@ -188,7 +188,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../obstructed_maze/">Obstructed Maze</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../dist_shift2/">Dist Shift2</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../lava_gap_s7/">Lava Gap S7</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../simple_crossing_s11_n5/">Simple Crossing S11 N5</a></li>
+<li class="toctree-l2 current current-page"><a class="current reference internal" href="#">Simple Crossing S11 N5</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../dynamic/">Dynamic</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../go_to_object/">Go To Object</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../playground/">Playground</a></li>
@@ -227,54 +227,128 @@
               <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
             </button>
           </div>
-          <label class="toc-overlay-icon toc-content-icon no-toc" for="__toc">
+          <label class="toc-overlay-icon toc-content-icon" for="__toc">
             <div class="visually-hidden">Toggle table of contents sidebar</div>
             <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
           </label>
         </div>
         <article role="main">
-          <section id="general-structure">
-<h1>General Structure<a class="headerlink" href="#general-structure" title="Permalink to this headline">#</a></h1>
-<p>Structure of the world:</p>
+          <section id="simple-crossing-s11-n5">
+<h1>Simple Crossing S11 N5<a class="headerlink" href="#simple-crossing-s11-n5" title="Permalink to this headline">#</a></h1>
+<section id="description">
+<h2>Description<a class="headerlink" href="#description" title="Permalink to this headline">#</a></h2>
+<p>Depending on the <code class="docutils literal notranslate"><span class="pre">obstacle_type</span></code> parameter:</p>
 <ul class="simple">
-<li><p>The world is an NxM grid of tiles</p></li>
-<li><p>Each tile in the grid world contains zero or one object</p>
-<ul>
-<li><p>Cells that do not contain an object have the value <code class="docutils literal notranslate"><span class="pre">None</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Lava</span></code> - The agent has to reach the green goal square on the other corner
+of the room while avoiding rivers of deadly lava which terminate the
+episode in failure. Each lava stream runs across the room either
+horizontally or vertically, and has a single crossing point which can be
+safely used; Luckily, a path to the goal is guaranteed to exist. This
+environment is useful for studying safety and safe exploration.</p></li>
+<li><p>otherwise - Similar to the <code class="docutils literal notranslate"><span class="pre">LavaCrossing</span></code> environment, the agent has to
+reach the green goal square on the other corner of the room, however
+lava is replaced by walls. This MDP is therefore much easier and maybe
+useful for quickly testing your algorithms.</p></li>
 </ul>
-</li>
-<li><p>Each object has an associated discrete color (string)</p></li>
-<li><p>Each object has an associated type (string)</p>
-<ul>
-<li><p>Provided object types are: wall, floor, lava, door, key, ball, box and goal</p></li>
-</ul>
-</li>
-<li><p>The agent can pick up and carry exactly one object (eg: ball or key)</p></li>
-<li><p>To open a locked door, the agent has to be carrying a key matching the door’s color</p></li>
-</ul>
-<p>Actions in the basic environment:</p>
+</section>
+<section id="mission-space">
+<h2>Mission Space<a class="headerlink" href="#mission-space" title="Permalink to this headline">#</a></h2>
+<p>Depending on the <code class="docutils literal notranslate"><span class="pre">obstacle_type</span></code> parameter:</p>
 <ul class="simple">
-<li><p>Turn left</p></li>
-<li><p>Turn right</p></li>
-<li><p>Move forward</p></li>
-<li><p>Pick up an object</p></li>
-<li><p>Drop the object being carried</p></li>
-<li><p>Toggle (open doors, interact with objects)</p></li>
-<li><p>Done (task completed, optional)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Lava</span></code> - “avoid the lava and get to the green goal square”</p></li>
+<li><p>otherwise - “find the opening and get to the green goal square”</p></li>
 </ul>
-<p>Default tile/observation encoding:</p>
+</section>
+<section id="action-space">
+<h2>Action Space<a class="headerlink" href="#action-space" title="Permalink to this headline">#</a></h2>
+<div class="table-wrapper colwidths-auto docutils container">
+<table class="colwidths-auto docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Num</p></th>
+<th class="head"><p>Name</p></th>
+<th class="head"><p>Action</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>0</p></td>
+<td><p>left</p></td>
+<td><p>Turn left</p></td>
+</tr>
+<tr class="row-odd"><td><p>1</p></td>
+<td><p>right</p></td>
+<td><p>Turn right</p></td>
+</tr>
+<tr class="row-even"><td><p>2</p></td>
+<td><p>forward</p></td>
+<td><p>Move forward</p></td>
+</tr>
+<tr class="row-odd"><td><p>3</p></td>
+<td><p>pickup</p></td>
+<td><p>Unused</p></td>
+</tr>
+<tr class="row-even"><td><p>4</p></td>
+<td><p>drop</p></td>
+<td><p>Unused</p></td>
+</tr>
+<tr class="row-odd"><td><p>5</p></td>
+<td><p>toggle</p></td>
+<td><p>Unused</p></td>
+</tr>
+<tr class="row-even"><td><p>6</p></td>
+<td><p>done</p></td>
+<td><p>Unused</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="observation-encoding">
+<h2>Observation Encoding<a class="headerlink" href="#observation-encoding" title="Permalink to this headline">#</a></h2>
 <ul class="simple">
-<li><p>Each tile is encoded as a 3 dimensional tuple: <code class="docutils literal notranslate"><span class="pre">(OBJECT_IDX,</span> <span class="pre">COLOR_IDX,</span> <span class="pre">STATE)</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">OBJECT_TO_IDX</span></code> and <code class="docutils literal notranslate"><span class="pre">COLOR_TO_IDX</span></code> mapping can be found in <span class="xref myst">minigrid/minigrid.py</span></p></li>
+<li><p>Each tile is encoded as a 3 dimensional tuple:
+<code class="docutils literal notranslate"><span class="pre">(OBJECT_IDX,</span> <span class="pre">COLOR_IDX,</span> <span class="pre">STATE)</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">OBJECT_TO_IDX</span></code> and <code class="docutils literal notranslate"><span class="pre">COLOR_TO_IDX</span></code> mapping can be found in
+<span class="xref myst">gym_minigrid/minigrid.py</span></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">STATE</span></code> refers to the door state with 0=open, 1=closed and 2=locked</p></li>
 </ul>
-<p>By default, sparse rewards are given for reaching a green goal tile. A
-reward of 1 is given for success, and zero for failure. There is also an
-environment-specific time step limit for completing the task.
-You can define your own reward function by creating a class derived
-from <code class="docutils literal notranslate"><span class="pre">MiniGridEnv</span></code>. Extending the environment with new object types or new actions
-should be very easy. If you wish to do this, you should take a look at the
-<span class="xref myst">minigrid/minigrid.py</span> source file.</p>
+</section>
+<section id="rewards">
+<h2>Rewards<a class="headerlink" href="#rewards" title="Permalink to this headline">#</a></h2>
+<p>A reward of ‘1’ is given for success, and ‘0’ for failure.</p>
+</section>
+<section id="termination">
+<h2>Termination<a class="headerlink" href="#termination" title="Permalink to this headline">#</a></h2>
+<p>The episode ends if any one of the following conditions is met:</p>
+<ol class="arabic simple">
+<li><p>The agent reaches the goal.</p></li>
+<li><p>The agent falls into lava.</p></li>
+<li><p>Timeout (see <code class="docutils literal notranslate"><span class="pre">max_steps</span></code>).</p></li>
+</ol>
+</section>
+<section id="registered-configurations">
+<h2>Registered Configurations<a class="headerlink" href="#registered-configurations" title="Permalink to this headline">#</a></h2>
+<p>S: size of the map SxS.
+N: number of valid crossings across lava or walls from the starting position
+to the goal</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">Lava</span></code> :</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">MiniGrid-LavaCrossingS9N1-v0</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">MiniGrid-LavaCrossingS9N2-v0</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">MiniGrid-LavaCrossingS9N3-v0</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">MiniGrid-LavaCrossingS11N5-v0</span></code></p></li>
+</ul>
+</li>
+<li><p>otherwise :</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">MiniGrid-SimpleCrossingS9N1-v0</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">MiniGrid-SimpleCrossingS9N2-v0</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">MiniGrid-SimpleCrossingS9N3-v0</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">MiniGrid-SimpleCrossingS11N5-v0</span></code></p></li>
+</ul>
+</li>
+</ul>
+</section>
 </section>
 
         </article>
@@ -282,16 +356,26 @@ should be very easy. If you wish to do this, you should take a look at the
       <footer>
         
         <div class="related-pages">
-          <a class="next-page" href="../">
+          <a class="next-page" href="../dynamic/">
               <div class="page-info">
                 <div class="context">
                   <span>Next</span>
                 </div>
-                <div class="title">Included environments</div>
+                <div class="title">Dynamic</div>
               </div>
               <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
             </a>
-          
+          <a class="prev-page" href="../lava_gap_s7/">
+              <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
+              <div class="page-info">
+                <div class="context">
+                  <span>Previous</span>
+                </div>
+                
+                <div class="title">Lava Gap S7</div>
+                
+              </div>
+            </a>
         </div>
         <div class="bottom-of-page">
           <div class="left-details">
@@ -312,8 +396,33 @@ should be very easy. If you wish to do this, you should take a look at the
         
       </footer>
     </div>
-    <aside class="toc-drawer no-toc">
+    <aside class="toc-drawer">
       
+      
+      <div class="toc-sticky toc-scroll">
+        <div class="toc-title-container">
+          <span class="toc-title">
+            On this page
+          </span>
+        </div>
+        <div class="toc-tree-container">
+          <div class="toc-tree">
+            <ul>
+<li><a class="reference internal" href="#">Simple Crossing S11 N5</a><ul>
+<li><a class="reference internal" href="#description">Description</a></li>
+<li><a class="reference internal" href="#mission-space">Mission Space</a></li>
+<li><a class="reference internal" href="#action-space">Action Space</a></li>
+<li><a class="reference internal" href="#observation-encoding">Observation Encoding</a></li>
+<li><a class="reference internal" href="#rewards">Rewards</a></li>
+<li><a class="reference internal" href="#termination">Termination</a></li>
+<li><a class="reference internal" href="#registered-configurations">Registered Configurations</a></li>
+</ul>
+</li>
+</ul>
+
+          </div>
+        </div>
+      </div>
       
       
     </aside>

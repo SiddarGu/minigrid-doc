@@ -3,11 +3,11 @@
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
     <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-<link rel="index" title="Index" href="../../genindex/" /><link rel="search" title="Search" href="../../search/" /><link rel="next" title="Included environments" href="../" /><link rel="prev" title="List of publications" href="../../content/pubs/" />
-        <link rel="canonical" href="TODO/environments/design.html" />
+<link rel="index" title="Index" href="../../genindex/" /><link rel="search" title="Search" href="../../search/" /><link rel="next" title="Dist Shift2" href="../dist_shift2/" /><link rel="prev" title="Blocked Unlock Pickup" href="../blocked_unlock_pickup/" />
+        <link rel="canonical" href="TODO/environments/obstructed_maze.html" />
 
     <link rel="shortcut icon" href="../../_static/favicon.svg"/><meta name="generator" content="sphinx-4.2.0, furo 2022.06.21"/>
-        <title>General Structure - MiniGrid Documentation</title>
+        <title>Obstructed Maze - MiniGrid Documentation</title>
       <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/styles/furo.css?digest=40978830699223671f4072448e654b5958f38b89" />
     <link rel="stylesheet" type="text/css" href="../../_static/styles/furo-extensions.css?digest=30d1aed668e5c3a91c3e3bf6a60b675221979f0e" />
@@ -169,8 +169,8 @@
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Environments</span></p>
 <ul class="current">
-<li class="toctree-l1 current current-page"><a class="current reference internal" href="#">General Structure</a></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../">Included environments</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l1"><a class="reference internal" href="../design/">General Structure</a></li>
+<li class="toctree-l1 current has-children"><a class="reference internal" href="../">Included environments</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../empty/">Empty</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../four_rooms/">Four Rooms</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../door_key/">Door Key</a></li>
@@ -185,7 +185,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../unlock/">Unlock</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../unlock_pickup/">Unlock Pickup</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../blocked_unlock_pickup/">Blocked Unlock Pickup</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../obstructed_maze/">Obstructed Maze</a></li>
+<li class="toctree-l2 current current-page"><a class="current reference internal" href="#">Obstructed Maze</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../dist_shift2/">Dist Shift2</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../lava_gap_s7/">Lava Gap S7</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../simple_crossing_s11_n5/">Simple Crossing S11 N5</a></li>
@@ -233,48 +233,11 @@
           </label>
         </div>
         <article role="main">
-          <section id="general-structure">
-<h1>General Structure<a class="headerlink" href="#general-structure" title="Permalink to this headline">#</a></h1>
-<p>Structure of the world:</p>
-<ul class="simple">
-<li><p>The world is an NxM grid of tiles</p></li>
-<li><p>Each tile in the grid world contains zero or one object</p>
-<ul>
-<li><p>Cells that do not contain an object have the value <code class="docutils literal notranslate"><span class="pre">None</span></code></p></li>
-</ul>
-</li>
-<li><p>Each object has an associated discrete color (string)</p></li>
-<li><p>Each object has an associated type (string)</p>
-<ul>
-<li><p>Provided object types are: wall, floor, lava, door, key, ball, box and goal</p></li>
-</ul>
-</li>
-<li><p>The agent can pick up and carry exactly one object (eg: ball or key)</p></li>
-<li><p>To open a locked door, the agent has to be carrying a key matching the door’s color</p></li>
-</ul>
-<p>Actions in the basic environment:</p>
-<ul class="simple">
-<li><p>Turn left</p></li>
-<li><p>Turn right</p></li>
-<li><p>Move forward</p></li>
-<li><p>Pick up an object</p></li>
-<li><p>Drop the object being carried</p></li>
-<li><p>Toggle (open doors, interact with objects)</p></li>
-<li><p>Done (task completed, optional)</p></li>
-</ul>
-<p>Default tile/observation encoding:</p>
-<ul class="simple">
-<li><p>Each tile is encoded as a 3 dimensional tuple: <code class="docutils literal notranslate"><span class="pre">(OBJECT_IDX,</span> <span class="pre">COLOR_IDX,</span> <span class="pre">STATE)</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">OBJECT_TO_IDX</span></code> and <code class="docutils literal notranslate"><span class="pre">COLOR_TO_IDX</span></code> mapping can be found in <span class="xref myst">minigrid/minigrid.py</span></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">STATE</span></code> refers to the door state with 0=open, 1=closed and 2=locked</p></li>
-</ul>
-<p>By default, sparse rewards are given for reaching a green goal tile. A
-reward of 1 is given for success, and zero for failure. There is also an
-environment-specific time step limit for completing the task.
-You can define your own reward function by creating a class derived
-from <code class="docutils literal notranslate"><span class="pre">MiniGridEnv</span></code>. Extending the environment with new object types or new actions
-should be very easy. If you wish to do this, you should take a look at the
-<span class="xref myst">minigrid/minigrid.py</span> source file.</p>
+          <section id="obstructed-maze">
+<h1>Obstructed Maze<a class="headerlink" href="#obstructed-maze" title="Permalink to this headline">#</a></h1>
+<p>A blue ball is hidden in one of the 4 corners of a 3x3 maze. Doors
+are locked, doors are obstructed by a ball and keys are hidden in
+boxes.</p>
 </section>
 
         </article>
@@ -282,16 +245,26 @@ should be very easy. If you wish to do this, you should take a look at the
       <footer>
         
         <div class="related-pages">
-          <a class="next-page" href="../">
+          <a class="next-page" href="../dist_shift2/">
               <div class="page-info">
                 <div class="context">
                   <span>Next</span>
                 </div>
-                <div class="title">Included environments</div>
+                <div class="title">Dist Shift2</div>
               </div>
               <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
             </a>
-          
+          <a class="prev-page" href="../blocked_unlock_pickup/">
+              <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
+              <div class="page-info">
+                <div class="context">
+                  <span>Previous</span>
+                </div>
+                
+                <div class="title">Blocked Unlock Pickup</div>
+                
+              </div>
+            </a>
         </div>
         <div class="bottom-of-page">
           <div class="left-details">
