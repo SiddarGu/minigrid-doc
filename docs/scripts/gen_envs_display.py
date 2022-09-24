@@ -1,33 +1,7 @@
 import sys
-
+'''
 all_envs = [
-    {
-        "id": "mujoco",
-        "list": [
-            "ant",
-            "half_cheetah",
-            "hopper",
-            "humanoid_standup",
-            "humanoid",
-            "inverted_double_pendulum",
-            "inverted_pendulum",
-            "reacher",
-            "swimmer",
-            "walker2d",
-        ],
-    },
-    {"id": "toy_text", "list": ["blackjack", "frozen_lake"]},
-    {"id": "box2d", "list": ["bipedal_walker", "car_racing", "lunar_lander"]},
-    {
-        "id": "classic_control",
-        "list": [
-            "acrobot",
-            "cart_pole",
-            "mountain_car_continuous",
-            "mountain_car",
-            "pendulum",
-        ],
-    },
+    
     {
         "id": "atari",
         "list": [
@@ -185,3 +159,4 @@ if __name__ == "__main__":
             fp = open(f"{envs_path}/index.html", "w+", encoding="utf-8")
             fp.write(page)
             fp.close()
+'''

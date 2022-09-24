@@ -1,10 +1,10 @@
 ---
 layout: "contents"
-title: Basic Usage and Reinforcement Learning
+title: Basic Usage
 firstpage:
 ---
 
-# Basic Usage and Reinforcement Learning
+# Basic Usage
 
 ## Basic Usage
 

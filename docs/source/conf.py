@@ -19,7 +19,8 @@
 #from TODO import __version__ as minigrid_version
 
 from importlib.machinery import SOURCE_SUFFIXES
-
+import os
+import sys
 
 project = "MiniGrid"
 copyright = "2022"
@@ -29,6 +30,7 @@ author = ""
 # TODO: change to minigrid version
 release = '1.2.1'
 
+sys.path.insert(0, os.path.abspath('../../..'))
 
 # -- General configuration ---------------------------------------------------
 

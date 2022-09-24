@@ -41,7 +41,7 @@ Please use this bibtex if you want to cite this repository in your publications:
 :caption: Introduction
 
 content/installation
-content/basic_usage_and_rl
+content/basic_usage
 api/wrappers
 content/pubs
 ```
